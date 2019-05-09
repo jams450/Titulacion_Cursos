@@ -1,0 +1,33 @@
+.error_login{
+  color: red !important;
+  margin-top: -25px;
+    width: 100%;
+    float:left;
+}
+.has-error label
+{
+  color:red;
+}
+.has-error input, .has-error select, .has-error textarea
+{
+  border-color: #d9042a !important;
+}
+.has-error .pambolera
+{
+  border-color: #d9042a !important;
+}
+
+.error_form{
+  color: red !important;
+  margin-top: 5px;
+}
+
+.error_form2{
+  color: red !important;
+  margin-top: -30px;
+  float: left;
+}
+
+#error_mensaje{
+  float: left;
+}
