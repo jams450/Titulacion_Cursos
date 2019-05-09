@@ -35,7 +35,7 @@
               </ul>
               <div class="mian-featured-area">
                 <div class="main-featured-text">
-                  <h1>Encuentra los mejores lugares</h1>
+                  <h1></h1>
                   <span>para tu viaje desde donde dormir, que comer, actividades para hacer y todo esto compartiéndolo con otras personas.</span>
                 </div>
                 <div class="directory-searcher">
