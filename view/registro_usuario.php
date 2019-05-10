@@ -180,6 +180,8 @@
 
         </style>
     </head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"></script>
     <body>
     <!-- TODO revisar PHP y Stylos-->
         <div class="page-loading">
@@ -309,15 +311,15 @@
                                                       </div>
                                                     </div>
                                                   </div>
-                                                </div>
-                                              </form>
+                                                </div>                                               
 
-                                                <button type="submit" name="registro_usuario" class="btn_guardar col-md-12 col-sm-12 col-xs-12" id="crear_user">CREAR USUARIO</button>
-                                                <script type="text/javascript">
-                                                  $('#crear_user').click(function(e){
-                                                    var datos=$('#newuser').serializeArray();
-                                                  });
-                                                </script>
+                                                  <button type="submit" name="registro_usuario" class="btn_guardar col-md-12 col-sm-12 col-xs-12" id="crear_user">CREAR USUARIO</button>
+                                                  <script type="text/javascript">
+                                                    $('#crear_user').click(function(e){
+                                                      var datos=$('#newuser').serializeArray();
+                                                    });
+                                                  </script>
+                                              </form>
                                             </fieldset>
                                         </div>
                                     </form>

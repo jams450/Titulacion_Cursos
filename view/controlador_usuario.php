@@ -1,10 +1,11 @@
 <?php
     var_dump($_POST);
+    echo "hola";
 
-    include_once("conexion.php");
+    include_once("/view/conexion.php");
 
     $stmt=$conexion->prepare("insert into usuarios (nombre,appat,apmat,edad,sexo,correo,username,passwd,tipopago) values (?,?,?,?,?,?,?,?,?)");
-    $comprobacion_correo=$conexion->prepare("select correo from ['usuarios'] where correo = '{$correo}' ");
+    $comprobacion_correo=$conexion->prepare("select correo from ['usuarios'] where correo = '{$correo}'");
     if (!$comprobacion_correo) {
       $stmt->bind_param("sssiisssi",$_POST['nombre'],$_POST['appat'],$_POST['apmat'],$_POST['edad'],$_POST['sexo'],$_POST['correo'],$_POST['username'],$_POST['passwd'],$_POST['tipopago']);
       $stmt->execute();
@@ -16,6 +17,7 @@
         $msj="Mal";
         die(json_encode($stmt->error));
       }
+      alert "CORREO YA REGISTRADO";
     }
 
     $stmt->close();
