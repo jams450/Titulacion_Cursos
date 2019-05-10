@@ -114,7 +114,6 @@
         </div>
       </div>
     </section>
-    <h2>ESTO ES UNA PRUEBA</h2>
     <!--section>
 				<div class="block gray remove-top">
 					<div class="row">
