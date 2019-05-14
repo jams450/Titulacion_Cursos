@@ -1,7 +1,8 @@
 create database titulacion;
 use titulacion;
+drop database titulacion;
 
-create database usuarios
+create table usuarios
 (
 	idusuario int auto_increment,
 	nombre varchar(45) not null,
@@ -13,10 +14,10 @@ create database usuarios
 	username varchar(30) not null,
 	passwd varchar(16) not null,
 	idtipopago int not null,
-	primary key (iduser)
+	primary key (idusuario)
 );
 alter table usuarios add foreign key (idtipopago) references tipospago(idtipopago);
-alter table usuarios add foreign key (idcurso) references cursos(idcurso);
+select * from usuarios;
 
 create table tipospago
 (
@@ -66,7 +67,7 @@ create table actividades_curso
 (
 	idcurso int not null,
     idactividad int not null,
-    ubicacion varchar(200) not null,
+    ubicacion varchar(255) not null,
     primary key(idcurso,idactividad)
 );
 alter table actividades_curso add foreign key (idcurso) references cursos(idcurso);
