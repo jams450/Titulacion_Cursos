@@ -33,19 +33,19 @@
     //validar form para login
     $("#log_in").validate({
       rules: {
-        email_user: {
+        nombre_login: {
           required: true
         },
-        password_user: {
+        password_login: {
           required: true
         }
       },
       messages: {
-        email_user: {
-          required: "Es necesario escribir el correo",
+        nombre_login: {
+          required: "Es necesario escribir el usuario",
           email: "El formato de correo no es valido"
         },
-        password_user: {
+        password_login: {
           required: "Escriba su contraseña"
         }
       },
@@ -70,29 +70,32 @@
       }
     });
 
-    // ------------
-    $(".haz_anfitrion").on("click", function (e) {
-      e.preventDefault();
-      $.ajax({
-        data: {
-          "hacer_anfitrion": true
-        },
-        type: "POST",
-        dataType: "json",
-        url: "src/Controller/usuariosController.php"
-      }).done(function (data) {
-        console.log(data);
-        if (data.data.status == 0) {
-          alert("Ahora eres anfitrion.");
-          window.location.href = "view/anfitrion/panel.php";
-        } else {
-          alert("Intente de nuevo mas tarde");
-        }
-      }).fail(function (jqXHR, textStatus, errorThrown) {
-        if (console && console.log) {
-          console.log("La solicitud a fallado: " + textStatus);
-        }
-      });
+    $("#login").click(function(event) {
+      event.preventDefault();
+      if ($("#log_in").valid()) {
+        /*
+        $.ajax({
+          url: '/src/Controller/altausuario.php',
+          type: 'default GET (Other values: POST)',
+          dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+          data: {param1: 'value1'}
+        })
+        .done(function() {
+          console.log("success");
+        })
+        .fail(function() {
+          console.log("error");
+        })
+        .always(function() {
+          console.log("complete");
+        });*/
+        $('#leyenda_error').css('display', 'block');
+        $('#nombre_error').text('Información invalida');
+        $('#desc_error').text('El usuario o password son incorrectos');
+      }
+
+
     });
+
   });
 </script>

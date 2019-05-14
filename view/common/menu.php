@@ -142,25 +142,13 @@
         width: 100%;
     }
 </style>
-<div id="leyenda_error" class="account-popup-sec-error" style="display:<?=$error?>" >
-    <div class="acount-popup-error">
+<div id="leyenda_error" class="account-popup-sec-error" style="display:none; z-index:10000" >
+    <div class="acount-popup-error" style="top : 30%">
         <span class="close-popup-error"><i class="la la-close"></i></span>
-        <h3>Ups! Hay un problema.</h3>
-        <p>
-            <?php
-                if (isset($_SESSION['error_login'])):
-            ?>
-            <span><?=$_SESSION['error_login']?><br>Inténtalo nuevamente.</span>
-            <?php
-            endif;
-            unset($_SESSION['error_login']);
-            if (isset($_GET["error"])):
-                ?>
-                <span><?=$_GET["error"]?><br>.</span>
-                <?php
-            endif;
-            unset($_GET["error"]);
-            ?>
+        <h3>Ocurrio un problema.</h3>
+        <h4 id="nombre_error">Nombre del error</h4>
+        <p id="desc_error">
+          Descripcion del error
         </p>
     </div>
 </div>
