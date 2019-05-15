@@ -3,11 +3,6 @@
     if (isset($_SESSION['id_sesion_usuario'])) {
         header("location: ../../index.php");
     }
-    if (isset($_GET['anfitrion']) && $_GET['anfitrion'] == 1) {
-        $anfitrion = 1;
-    } else {
-        $anfitrion = 0;
-    }
     $error = isset($_GET['error']) ? 'block' : 'none';
 
 ?>
@@ -238,9 +233,11 @@
                                                       <input id="appat" name="appat" required="required" type="text" value="" maxlength="80" placeholder="Apellido Paterno *" data-rule-required="true" data-msg-required="Apellido Paterno requerido" autocomplete="off">
                                                     </div>
                                                   </div>
+                                                </div>
+                                                <div class="row">
                                                   <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <div class="form_re">
-                                                      <input id="apmat" name="apmat" type="text" value="" maxlength="80" placeholder="Apellido Materno" data-rule-required="true" autocomplete="off">
+                                                      <input id="apmat" name="apmat" type="text" value="" maxlength="80" placeholder="Apellido Materno" autocomplete="off">
                                                     </div>
                                                   </div>
                                                   <div class="col-md-6 col-sm-6 col-xs-12">
@@ -248,6 +245,8 @@
                                                       <input id="edad" name="edad" type="number" value="" maxlength="80" placeholder="Edad" data-rule-required="true" autocomplete="off" min="15" max="99" step="1">
                                                     </div>
                                                   </div>
+                                                </div>
+                                                <div class="row">
                                                   <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <div class="form_re">
                                                       <input id="correo" name="correo" required="required" type="email" value="" maxlength="80" placeholder="Correo *" data-rule-required="true" data-msg-required="Correo requerido" autocomplete="off">
@@ -255,13 +254,13 @@
                                                   </div>
                                                   <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <div class="col-md-12 col-sm-12 col-xs-12 form_re">
-                                                      <div class="col-md-3 col-sm-3 col-xs-6">
+                                                      <div class="col-md-6 col-sm-6 col-xs-12">
                                                           <label class="container_radio">Femenino
                                                               <input required type="radio" name="sexo" data-msg-required="Género requerido" value="0">
                                                               <span class="checkmark"></span>
                                                           </label>
                                                       </div>
-                                                      <div class="col-md-3 col-sm-3 col-xs-6">
+                                                      <div class="col-md-6 col-sm-6 col-xs-12">
                                                           <label class="container_radio">Masculino
                                                               <input required type="radio" name="sexo" data-msg-required="Género requerido" value="1">
                                                               <span class="checkmark"></span>
@@ -270,6 +269,7 @@
                                                     </div>
                                                   </div>
                                                 </div>
+
 
                                                 <br><br>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -287,6 +287,9 @@
                                                       <input id="paswword" name="passwd" required="required" type="password" value="" maxlength="16" placeholder="Password *" data-rule-required="true" data-msg-required="Password requerido" autocomplete="off">
                                                     </div>
                                                   </div>
+                                                </div>
+
+                                                <div class="row">
                                                   <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <div class="col-md-12 col-sm-12 col-xs-12 form_re">
                                                       <div class="col-md-4 col-sm-4 col-xs-12">
@@ -310,13 +313,7 @@
                                                     </div>
                                                   </div>
                                                 </div>
-
-                                                  <button type="submit" name="registro_usuario" class="btn_guardar col-md-12 col-sm-12 col-xs-12" id="crear_user">CREAR USUARIO</button>
-                                                  <script type="text/javascript">
-                                                    $('#crear_user').click(function(e){
-                                                      var datos=$('#newuser').serializeArray();
-                                                    });
-                                                  </script>
+                                                  <button type="submit" id="registro_usuario" name="registro_usuario" class="btn_guardar col-md-12 col-sm-12 col-xs-12" id="crear_user">CREAR USUARIO</button>
                                               </form>
                                             </fieldset>
                                         </div>
@@ -335,10 +332,6 @@
 
         </div>
 
-        <?php
-            // unset($_SESSION['mensaje']);
-        ?>
-
         <?php include_once('./common/script.php'); ?>
         <!-- Script para cambiar la imagen de usuario -->
         <script type="text/javascript" src="assets/js/bootstrap-datepicker.min.js"></script>
@@ -346,7 +339,6 @@
         <script type="text/javascript" src="assets/js/wickedpicker.min.js"></script>
         <script type="text/javascript" src="assets/js/choosen.min.js"></script>
         <script type="text/javascript" src="assets/js/sweetalert2.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSnk9dEgww168WatGDK-FO9GHZ3WY7bRg&libraries=places&callback=initialize" async defer></script>
         <script type="text/javascript" src="src/js/alta_usuario.js"></script>
 
     </body>
