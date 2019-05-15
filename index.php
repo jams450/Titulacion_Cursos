@@ -96,7 +96,6 @@
       </div>
     </section>
 
-
     <section>
       <div class="block gray remove-top">
         <div class="container">
