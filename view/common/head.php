@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="creativelayers">
-    <title>Wiyoi</title>
+    <title>AEF</title>
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" /><!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap-datepicker3.standalone.min.css" type="text/css" /><!-- Bootstrap -->

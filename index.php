@@ -1,6 +1,5 @@
 <?php
     session_start();
-    $error = isset($_SESSION['error_login']) ? 'block' : 'none';
 ?>
 <!DOCTYPE html>
 
@@ -35,33 +34,16 @@
               </ul>
               <div class="mian-featured-area">
                 <div class="main-featured-text">
-                  <h1></h1>
-                  <span>para tu viaje desde donde dormir, que comer, actividades para hacer y todo esto compartiéndolo con otras personas.</span>
+                  <h1>Cursos de educacion financiera AEF</h1>
+                  <span>Algunos de los mejores cursos</span>
                 </div>
-                <div class="directory-searcher">
-                  <form method="get" action="view/servicio-actividad/actividad.php">
-                    <div class="field"><input type="text" placeholder="Keywords" name="search" id="searcher"></div>
-                    <div class="field">
-                      <select data-placeholder="Todos los lugares" class="chosen-select" name="city" tabindex="2" id="ciudad">
-                        <option value="">Todos los lugares</option>
-                      </select>
-                    </div>
-                    <div class="field">
-                      <select data-placeholder="Todas la categorías" class="chosen-select" tabindex="2" name="tipoActividad" id="tipo_actividad">
-                        <option value="">Todas la categorías</option>
-                      </select>
-                    </div>
-                    <div class="field">
-                      <button type="submit"><i class="la la-search"></i>BUSCAR</button>
-                    </div>
-                  </form>
-                </div>
+
                 <div class="cat-lists">
                   <ul>
-                    <li><a href="view/servicio-coche/coche.php" title="Compartir coche"><i class="la la-car"></i><span>Compartir coche</span></a></li>
-                    <li><a href="view/servicio-gastronomia/gastronomia.php" title="Gastronomía"><i class="la la-spoon"></i><span>Gastronomía</span></a></li>
-                    <li><a href="view/servicio-actividad/actividad.php" title="Actividades"><i class="la la-photo"></i><span>Actividades</span></a></li>
-                    <li><a href="view/servicio-alojamiento/alojamiento.php" title="Alojamiento"><i class="la la-bed"></i><span>Alojamiento</span></a></li>
+                    <li><a href="view/servicio-coche/coche.php" title="Tarjeta"><i class="la la-credit-card"></i><span>Tarjeta de credito</span></a></li>
+                    <li><a href="view/servicio-gastronomia/gastronomia.php" title="Gastronomía"><i class="la la-spoon"></i><span>XXX</span></a></li>
+                    <li><a href="view/servicio-actividad/actividad.php" title="Actividades"><i class="la la-photo"></i><span>XXX</span></a></li>
+                    <li><a href="view/servicio-alojamiento/alojamiento.php" title="Alojamiento"><i class="la la-bed"></i><span>XXXX</span></a></li>
                   </ul>
                 </div>
                 <a class="arrow-down floating" href="#scroll-here" title=""><i class="la la-angle-down"></i></a>
@@ -79,7 +61,6 @@
             <div class="col-md-12">
               <div class="heading">
                 <h2>¿Qué te gustaría hacer?</h2>
-                <span>Descubre todo lo que puedes hacer en ese destino que quieres visitar.</span>
               </div>
             </div>
             <div class="do-tonight-sec">
@@ -88,24 +69,24 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="dt-box">
-                        <a href="view/servicio-alojamiento/alojamiento.php" target="_self" title=""><img src="assets/images/home/alojamiento.jpg" alt="" /><span>Alojamiento</span></a>
+                        <a href="view/servicio-alojamiento/alojamiento.php" target="_self" title=""><img src="assets/images/home/alojamiento.jpg" alt="" /><span>Ver Cursos</span></a>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="dt-box">
-                        <a href="view/servicio-coche/coche.php" target="_self" title=""><img src="assets/images/home/compartir_coche.jpg" alt="" /><span>Compartir coche</span></a>
+                        <a href="view/servicio-coche/coche.php" target="_self" title=""><img src="assets/images/home/compartir_coche.jpg" alt="" /><span>Registrarse</span></a>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="dt-box">
-                        <a href="view/servicio-gastronomia/gastronomia.php" target="_self" title=""><img src="assets/images/home/gastronomia.jpg" alt="" /><span>Gastronomía</span></a>
+                        <a href="view/servicio-gastronomia/gastronomia.php" target="_self" title=""><img src="assets/images/home/gastronomia.jpg" alt="" /><span>Control de Gastos</span></a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="dt-box">
-                    <a href="view/servicio-actividad/actividad.php" target="_self" title=""><img src="assets/images/home/aventura.jpg" alt="" /><span>Actividades</span></a>
+                    <a href="view/servicio-actividad/actividad.php" target="_self" title=""><img src="assets/images/home/aventura.jpg" alt="" /><span>XXXX</span></a>
                   </div>
                 </div>
               </div>
@@ -114,28 +95,7 @@
         </div>
       </div>
     </section>
-    <!--section>
-				<div class="block gray remove-top">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="heading">
-								<h2>Lugares recientes</h2>
-								<span>Mira lo que están buscando otras personas.</span>
-							</div>
-							<div class="listing-carousel">
-								<div class="row" id="listing-carousel">
 
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section
-    <pre>
-    <?php
-    //print_r($_ENV);
-    ?>
-</pre>-->
     <section>
       <div class="block gray remove-top">
         <div class="container">
@@ -151,21 +111,21 @@
                   <div class="col-md-4">
                     <div class="services">
                       <i class="la la-paperclip"></i>
-                      <h3>Seleccionas una categoria</h3>
+                      <h3>Cursos</h3>
                       <p>Tienes la opción de seleccionar entre alojamiento, compartir coche, ir a comer a la casa de algún anfitrión o reservar una actividad turística que puede ir desde escalar una montaña hasta tomar clases de fotografía.</p>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="services">
                       <i class="la la-map-marker"></i>
-                      <h3>Buscar el lugar</h3>
+                      <h3>Hacer actividades</h3>
                       <p>Selecciona el lugar donde quieres realizar tu viaje.</p>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="services">
                       <i class="la la-tencent-weibo"></i>
-                      <h3>Reserva fácil y luego diviertete</h3>
+                      <h3>Gastos</h3>
                       <p>Reserva fácilmente y paga de una manera ágil y segura.</p>
                     </div>
                   </div>
