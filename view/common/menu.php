@@ -91,7 +91,7 @@
         <nav class="header-menu">
             <ul>
                 <li class="menu-item-has-children imagen_log">
-                    <a href="#" title="Imagen de perfil"><?=$_SESSION["nombre_usuario"]?></a>
+                    <a href="#" title="Imagen de perfil" style="margin-top: 10px;"><?=$_SESSION["nombre_usuario"]?></a>
                     <ul>
                       <li><a href="view/ver_perfil.php" title="Ver perfil">Ver Perfil</a></li>
                       <li><a href="view/anfitrion/panel.php" title="Ver perfil">Mis Cursos</a></li>

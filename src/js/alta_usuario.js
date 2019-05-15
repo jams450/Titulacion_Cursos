@@ -37,16 +37,35 @@ $('#registro_usuario').click(function(event) {
         var data = res;
         switch (data) {
           case 'exito':
-            alert(data);
+          swal({
+              type: 'success',
+              title: 'Usuario registrado',
+            });
+            setTimeout(function(){
+                window.open('/index.php');
+            }, 1500);
+
             break;
           case 'correo_mal':
-            alert(data);
+          swal({
+              type: 'error',
+              title: 'Ocurrio un error',
+              text: 'El correo ya esta asociado a una cuenta',
+            })
             break;
           case 'usuario_mal':
-            alert(data);
+          swal({
+              type: 'error',
+              title: 'Ocurrio un error',
+              text: 'El usuario ya esta ocupado',
+            })
             break;
           case 'error':
-            alert(data);
+          swal({
+              type: 'error',
+              title: 'Ocurrio un error',
+              text: 'Intente otra vez',
+            })
             break;
           default:
 

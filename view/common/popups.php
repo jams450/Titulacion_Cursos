@@ -1,5 +1,5 @@
 <!-- TODO quitar comentarios para cacharlos como cambio en github-->
-<div class="account-popup-sec">
+<div class="account-popup-sec" style="z-index:500">
     <div class="acount-popup login-popup">
         <span class="close-popup"><i class="la la-close"></i></span>
         <h3>LOGIN</h3>
@@ -15,7 +15,8 @@
                 <span class="focus-border"></span>
             </div>
             <a href="recuperarpass.php" title="Recuperar password">Recupera tu password</a>
-            <button type="submit" id="login" name="login">LOGIN</button>
+            <input type="hidden" name="operacion" id="operacion" value="login">
+            <button type="submit" id="login_boton" name="login">LOGIN</button>
         </form>
     </div>
 </div>
