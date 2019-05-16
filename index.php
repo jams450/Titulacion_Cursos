@@ -7,7 +7,7 @@
   <?php include_once('view/common/head.php'); ?>
   <style>
     .top-header {
-      padding-top: 45px;
+      padding-top: 90px;
     }
   </style>
 </head>
@@ -29,24 +29,23 @@
                 <li><img src="assets/images/main_slider/home-banner2.jpg" alt="" /></li>
                 <li><img src="assets/images/main_slider/home-banner3.jpg" alt="" /></li>
                 <li><img src="assets/images/main_slider/home-banner4.jpg" alt="" /></li>
-                <li><img src="assets/images/main_slider/home-banner5.jpg" alt="" /></li>
+
                 <li><img src="assets/images/main_slider/home-banner6.jpg" alt="" /></li>
               </ul>
               <div class="mian-featured-area">
                 <div class="main-featured-text">
-                  <h1>Cursos de educacion financiera AEF</h1>
-                  <span>Algunos de los mejores cursos</span>
+                  <h1 style="color:#00171f">Cursos de educacion financiera AEF</h1>
+                  <span style="color:#00171f; font-weight: bold;">Algunos de los mejores cursos</span>
                 </div>
 
                 <div class="cat-lists">
                   <ul>
-                    <li><a href="view/servicio-coche/coche.php" title="Tarjeta"><i class="la la-credit-card"></i><span>Tarjeta de credito</span></a></li>
-                    <li><a href="view/servicio-gastronomia/gastronomia.php" title="Gastronomía"><i class="la la-spoon"></i><span>XXX</span></a></li>
-                    <li><a href="view/servicio-actividad/actividad.php" title="Actividades"><i class="la la-photo"></i><span>XXX</span></a></li>
-                    <li><a href="view/servicio-alojamiento/alojamiento.php" title="Alojamiento"><i class="la la-bed"></i><span>XXXX</span></a></li>
+                    <li><a href="" title="Tarjeta"><i class="la la-credit-card"></i><span style="color:#00171f;">Tarjeta de credito</span></a></li>
+                    <li><a href="" title="Ahorro"><i class="la la la-bank"></i><span style="color:#00171f;">Cuenta de Ahorro</span></a></li>
+                    <li><a href="" title="Seguros"><i class="la la la-shield"></i><span style="color:#00171f;">Seguros</span></a></li>
                   </ul>
                 </div>
-                <a class="arrow-down floating" href="#scroll-here" title=""><i class="la la-angle-down"></i></a>
+                <a style="color:#00171f;" class="arrow-down floating" href="#scroll-here" title=""><i style="color:#00171f;" class="la la-angle-down"></i></a>
               </div>
             </div>
           </div>
@@ -65,28 +64,23 @@
             </div>
             <div class="do-tonight-sec">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                   <div class="row">
                     <div class="col-md-12">
                       <div class="dt-box">
-                        <a href="view/servicio-alojamiento/alojamiento.php" target="_self" title=""><img src="assets/images/home/alojamiento.jpg" alt="" /><span>Ver Cursos</span></a>
+                        <a href="" target="_self" title=""><img style="height: 400px;" src="assets/images/home/cursos.jpg" sy alt="" /><span>Ver Cursos</span></a>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="dt-box">
-                        <a href="view/servicio-coche/coche.php" target="_self" title=""><img src="assets/images/home/compartir_coche.jpg" alt="" /><span>Registrarse</span></a>
+                        <a href="" target="_self" title=""><img style="height: 330px;" src="assets/images/home/checklist.png" alt="" /><span>Registrarse</span></a>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="dt-box">
-                        <a href="view/servicio-gastronomia/gastronomia.php" target="_self" title=""><img src="assets/images/home/gastronomia.jpg" alt="" /><span>Control de Gastos</span></a>
+                        <a href="" target="_self" title=""><img src="assets/images/home/gastos.jpg" alt="" /><span>Control de Gastos</span></a>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="dt-box">
-                    <a href="view/servicio-actividad/actividad.php" target="_self" title=""><img src="assets/images/home/aventura.jpg" alt="" /><span>XXXX</span></a>
                   </div>
                 </div>
               </div>
@@ -112,21 +106,21 @@
                     <div class="services">
                       <i class="la la-paperclip"></i>
                       <h3>Cursos</h3>
-                      <p>Tienes la opción de seleccionar entre alojamiento, compartir coche, ir a comer a la casa de algún anfitrión o reservar una actividad turística que puede ir desde escalar una montaña hasta tomar clases de fotografía.</p>
+                      <p></p>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="services">
                       <i class="la la-map-marker"></i>
-                      <h3>Hacer actividades</h3>
-                      <p>Selecciona el lugar donde quieres realizar tu viaje.</p>
+                      <h3>Acreditacion</h3>
+                      <p></p>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="services">
                       <i class="la la-tencent-weibo"></i>
-                      <h3>Gastos</h3>
-                      <p>Reserva fácilmente y paga de una manera ágil y segura.</p>
+                      <h3>Control de Gastos</h3>
+                      <p></p>
                     </div>
                   </div>
                 </div>
@@ -145,24 +139,15 @@
               <div class="counter-sec">
                 <div class="counter">
                   <i class="la la-file"></i>
-                  <h3>ANFITRIONES</h3>
-                  <span id="anfitriones"></span>
+                  <h3>CURSOS</h3>
+                  <span id="anfitriones">10</span>
                 </div>
                 <div class="counter">
                   <i class="la la-user"></i>
                   <h3>USUARIOS</h3>
-                  <span id="usuarios"></span>
+                  <span id="usuarios">1543</span>
                 </div>
-                <div class="counter">
-                  <i class="la la-list"></i>
-                  <h3>ACTIVIDADES</h3>
-                  <span id="actividades"></span>
-                </div>
-                <div class="counter">
-                  <i class="la la-folder-o"></i>
-                  <h3>CATEGORÍAS</h3>
-                  <span>4</span>
-                </div>
+
               </div>
             </div>
           </div>
@@ -176,8 +161,8 @@
           <div class="row">
             <div class="col-md-12">
               <div class="heading">
-                <h2>Artículos & Tips</h2>
-                <span>Lee nuestras notas donde te daremos consejos para tus viajes y te diremos que nuevos lugares conocer.</span>
+                <h2>Instituciones</h2>
+                <span>Instituciones juridicas que te puedes ayudar etc</span>
               </div>
               <div class="blog-sec">
                 <div class="row">
@@ -233,7 +218,6 @@
                     </div><!-- BLog Post  -->
                   </div>
                 </div>
-                <a href="https://wejoytrip.com/blog/" target="_blank" title="" class="view-all-blog">Ver Blog</a>
               </div>
             </div>
           </div>
@@ -300,24 +284,6 @@
       </div>
     </section>
 
-    <section>
-      <div class="block gray remove-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="subscribe-sec">
-                <i class="la la-envelope-o"></i>
-                <p>Suscríbase a nuestro newsletter</p>
-                <form>
-                  <input type="text" placeholder="Tu email" />
-                  <button type="submit"><i class="la la-angle-right"></i></button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <?php include('view/common/footer.php'); ?>
 
