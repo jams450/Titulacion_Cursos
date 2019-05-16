@@ -59,15 +59,8 @@
         ?>
             <li><a href="index.php" title="Inicio">Inicio</a></li>
 
-            <li class="menu-item-has-children">
-                <a href="#" title="Experiencias">Cursos</a>
-                <ul>
-                    <li><a href="view/servicio-actividad/actividad.php" title="Experiencias">Actividades</a></li>
-                    <li><a href="view/servicio-alojamiento/alojamiento.php" title="Alojamientos">Alojamientos</a></li>
-                    <li><a href="view/servicio-coche/coche.php" title="Compartir coche">Compartir coche</a></li>
-                    <li><a href="view/servicio-gastronomia/gastronomia.php" title="Gastronomía">Gastronomía</a></li>
-                </ul>
-            </li>
+            <li><a href="view/cursos/buscador_cursos.php" title="Inicio">Cursos</a></li>
+
             <li><a href="view/contacto.php" title="Contacto">Contacto</a></li>
         </ul>
     </div>
@@ -108,15 +101,7 @@
         <nav class="header-menu">
             <ul>
                 <li><a href="index.php" title="Inicio">Inicio</a></li>
-                <li class="menu-item-has-children">
-                    <a href="#" title="Experiencias">Cursos</a>
-                    <ul>
-                        <li><a href="view/servicio-actividad/actividad.php" title="Experiencias">Actividades</a></li>
-                        <li><a href="view/servicio-alojamiento/alojamiento.php" title="Alojamientos">Alojamientos</a></li>
-                        <li><a href="view/servicio-coche/coche.php" title="Compartir coche">Compartir coche</a></li>
-                        <li><a href="view/servicio-gastronomia/gastronomia.php" title="Gastronomía">Gastronomía</a></li>
-                    </ul>
-                </li>
+                <li><a href="view/cursos/buscador_cursos.php" title="Inicio">Cursos</a></li>
                 <li><a href="view/contacto.php" title="Contacto">Contacto</a></li>
             </ul>
         </nav>

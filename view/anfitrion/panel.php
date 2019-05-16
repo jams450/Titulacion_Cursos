@@ -1,7 +1,6 @@
 <?php
     session_start();
     if (!isset($_SESSION['id_sesion_usuario'])) {
-        header("location: index.php");
     }
 ?>
 <!DOCTYPE html>
