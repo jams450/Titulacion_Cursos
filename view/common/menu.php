@@ -16,7 +16,8 @@
         if (!isset($_SESSION["id_sesion_usuario"])) {
             ?>
             <div class="acount-header-btn">
-                <a href="view/registro_usuario.php" title="Hazte anfitrión" class="register-btn" >Registro</a>
+                <a href="/view/panel.php" title="Menú">Menú</a>
+                <a href="/view/registro_usuario.php" title="Registro" class="register-btn" >Registro</a>
                 <span class="login-btn">Login</span>
             </div>
       <?php
@@ -49,9 +50,10 @@
             <li class="menu-item-has-children">
                 <a href="#"><?=$_SESSION["nombre_usuario"]?></a>
                 <ul>
-                    <li><a href="view/ver_perfil.php" title="Ver perfil">Ver Perfil</a></li>
-                    <li><a href="view/anfitrion/panel.php" title="Ver perfil">Mis Cursos</a></li>
-                    <li><a href="view/usuarios/logout.php" title="Cerrar sesión">Cerrar sesión</a></li>
+                    <li><a href="view/ver_perfil.php" title="Mi Perfil">Mi Perfil</a></li>
+                    <li><a href="view/anfitrion/panel.php" title="Cursos">Cursos</a></li>
+                    <li><a href="view/usuarios/logout.php" title="Mis Gastos">Mis Gastos</a></li>
+                    <li><a href="view/usuarios/logout.php" title="Cerrar Sesión">Cerrar Sesión</a></li>
                 </ul>
             </li>
         <?php
@@ -60,12 +62,15 @@
             <li><a href="index.php" title="Inicio">Inicio</a></li>
 
             <li class="menu-item-has-children">
-                <a href="#" title="Experiencias">Cursos</a>
+                <a href="#" title="Cursos">Cursos</a>
                 <ul>
-                    <li><a href="view/servicio-actividad/actividad.php" title="Experiencias">Actividades</a></li>
-                    <li><a href="view/servicio-alojamiento/alojamiento.php" title="Alojamientos">Alojamientos</a></li>
-                    <li><a href="view/servicio-coche/coche.php" title="Compartir coche">Compartir coche</a></li>
-                    <li><a href="view/servicio-gastronomia/gastronomia.php" title="Gastronomía">Gastronomía</a></li>
+                    <li><a href="view/servicio-actividad/actividad.php" title="Tarjeta de Débito">Tarjeta de Débito</a></li>
+                    <li><a href="view/servicio-alojamiento/alojamiento.php" title="Tarjeta de Crédito">Tarjeta de Crédito</a></li>
+                    <li><a href="view/servicio-coche/coche.php" title="Cuenta de Ahorro">Cuenta de Ahorro</a></li>
+                    <li><a href="view/servicio-gastronomia/gastronomia.php" title="Cuenta de Inversión">Cuenta de Inversión</a></li>
+                    <li><a href="view/servicio-alojamiento/alojamiento.php" title="Sistema de Ahorro para el Retiro">Sistema de Ahorro para el Retiro</a></li>
+                    <li><a href="view/servicio-coche/coche.php" title="Seguros">Seguros</a></li>
+                    <li><a href="view/servicio-gastronomia/gastronomia.php" title="Crédito Automotriz">Crédito Automotriz</a></li>
                 </ul>
             </li>
             <li><a href="view/contacto.php" title="Contacto">Contacto</a></li>
@@ -80,7 +85,8 @@
             if (!isset($_SESSION["id_sesion_usuario"])) {
                 ?>
           <div class="acount-header-btn">
-              <a href="view/registro_usuario.php" title="Hazte anfitrión" class="register-btn" >Registro</a>
+              <a href="/view/panel.php" title="Menú" class="register-btn">Menú</a>
+              <a href="/view/registro_usuario.php" title="Registro" class="register-btn" >Registro</a>
               <span class="login-btn">Login</span>
           </div>
         <?php
@@ -93,9 +99,10 @@
                 <li class="menu-item-has-children imagen_log">
                     <a href="#" title="Imagen de perfil"><?=$_SESSION["nombre_usuario"]?></a>
                     <ul>
-                      <li><a href="view/ver_perfil.php" title="Ver perfil">Ver Perfil</a></li>
-                      <li><a href="view/anfitrion/panel.php" title="Ver perfil">Mis Cursos</a></li>
-                      <li><a href="view/usuarios/logout.php" title="Cerrar sesión">Cerrar sesión</a></li>
+                      <li><a href="view/ver_perfil.php" title="Mi Perfil">Mi Perfil</a></li>
+                      <li><a href="view/anfitrion/panel.php" title="Cursos">Cursos</a></li>
+                      <li><a href="view/usuarios/logout.php" title="Mis Gastos">Mis Gastos</a></li>
+                      <li><a href="view/usuarios/logout.php" title="Cerrar Sesión">Cerrar Sesión</a></li>
                     </ul>
                 </li>
             </ul>
@@ -109,12 +116,15 @@
             <ul>
                 <li><a href="index.php" title="Inicio">Inicio</a></li>
                 <li class="menu-item-has-children">
-                    <a href="#" title="Experiencias">Cursos</a>
+                    <a href="#" title="Cusos">Cursos</a>
                     <ul>
-                        <li><a href="view/servicio-actividad/actividad.php" title="Experiencias">Actividades</a></li>
-                        <li><a href="view/servicio-alojamiento/alojamiento.php" title="Alojamientos">Alojamientos</a></li>
-                        <li><a href="view/servicio-coche/coche.php" title="Compartir coche">Compartir coche</a></li>
-                        <li><a href="view/servicio-gastronomia/gastronomia.php" title="Gastronomía">Gastronomía</a></li>
+                      <li><a href="view/servicio-actividad/actividad.php" title="Tarjeta de Débito">Tarjeta de Débito</a></li>
+                      <li><a href="view/servicio-alojamiento/alojamiento.php" title="Tarjeta de Crédito">Tarjeta de Crédito</a></li>
+                      <li><a href="view/servicio-coche/coche.php" title="Cuenta de Ahorro">Cuenta de Ahorro</a></li>
+                      <li><a href="view/servicio-gastronomia/gastronomia.php" title="Cuenta de Inversión">Cuenta de Inversión</a></li>
+                      <li><a href="view/servicio-alojamiento/alojamiento.php" title="Sistema de Ahorro para el Retiro">Sistema de Ahorro para el Retiro</a></li>
+                      <li><a href="view/servicio-coche/coche.php" title="Seguros">Seguros</a></li>
+                      <li><a href="view/servicio-gastronomia/gastronomia.php" title="Crédito Automotriz">Crédito Automotriz</a></li>
                     </ul>
                 </li>
                 <li><a href="view/contacto.php" title="Contacto">Contacto</a></li>

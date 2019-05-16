@@ -31,17 +31,17 @@ insert into tipospago values (3, "Tarjeta de Credito");
 
 create table cursos
 (
-	idcurso int auto_increment,
+	idcurso int not null,
     nombrecurso varchar(35) not null,
     primary key (idcurso)
 );
-insert into cursos values (null, "Tarjeta de Debito");
-insert into cursos values (null, "Tarjeta de Crédito");
-insert into cursos values (null, "Cuenta de Ahorro");
-insert into cursos values (null, "Cuenta de Inversión");
-insert into cursos values (null, "Sistema de Ahorro para el Retiro");
-insert into cursos values (null, "Seguros");
-insert into cursos values (null, "Crédito Automotriz");
+insert into cursos values (1, "Tarjeta de Debito");
+insert into cursos values (2, "Tarjeta de Crédito");
+insert into cursos values (3, "Cuenta de Ahorro");
+insert into cursos values (4, "Cuenta de Inversión");
+insert into cursos values (5, "Sistema de Ahorro para el Retiro");
+insert into cursos values (6, "Seguros");
+insert into cursos values (7, "Crédito Automotriz");
 
 create table inscripcion_cursos
 (
@@ -71,6 +71,8 @@ create table actividades_curso
     primary key(idcurso,idactividad)
 );
 alter table actividades_curso add foreign key (idcurso) references cursos(idcurso);
+alter table actividades_curso add index(idactividad);
+alter table actividades_curso change idactividad idactividad int not null auto_increment;
 
 create table actividades_alumnos
 (
@@ -86,3 +88,30 @@ create table actividades_alumnos
 alter table actividades_alumnos add foreign key (idcurso) references cursos(idcurso);
 alter table actividades_alumnos add foreign key (idactividad) references actividades_curso(idactividad);
 alter table actividades_alumnos add foreign key (idusuario) references usuarios(idusuario);
+
+create table info_cursos
+(
+	idcurso int not null,
+    idinfo int not null auto_increment,
+    encabezado varchar(30),
+    descripcion_informacion varchar(500), /*html info*/
+    imagen varchar(255),
+    /*preguntas varchar(30),
+    respuestas varchar(500),
+    calificacion bit, /*0 - Correcta, 1 - Incorrecta
+    total_respuestascorrectas int,*/
+    primary key(idcurso)
+);
+
+create table examenes_cursos
+(
+	idcurso int not null,
+    idexamen int not null,
+    encabezado varchar(30),
+    preguntas_examen varchar(200),
+    respuestas_examen varchar(200),
+    /*respuestas_examen varchar(50),
+    calificacion bit, /*0 - Correcta, 1 - Incorrecta
+    total_respuestascorrectas int,*/
+    primary key (idcurso)
+);
