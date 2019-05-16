@@ -5,6 +5,7 @@
     }
     $error = isset($_GET['error']) ? 'block' : 'none';*/
 ?>
+?>
 <!DOCTYPE html>
 	<head>
         <?php include_once($_SERVER["DOCUMENT_ROOT"] . "/view/common/head.php");?>
@@ -191,10 +192,10 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="inner-header">
-									<h2>Menú de Usuario</h2>
+									<h2>Mis Cursos</h2>
 									<ul class="breadcrumbs">
 										<li><a href="index.php" title="">Inicio</a></li>
-										<li>Menú de Usuario</li>
+										<li>Mis Cursos</li>
 									</ul>
 								</div>
 							</div>
@@ -203,97 +204,45 @@
 				</div>
 			</section>
 
-      <section>
-		<div class="block gray ">
+  <section>
+    <div class="block gray ">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<div class="how-it-works"><a href="/view/registro_usuario.php">
-							<div class="work-icon"> <img src="/view/images/icons/usuario.png" width="100" height="100" alt="" /> </div>
-							<div class="work-detail">
-								<h3>Mi Perfil</h3>
-								<p>Consulta o modifica tu información.</p>
-								<span class="number">01</span>
+					<div class="col-md-8 column col-md-offset-2">
+						<div class="blog-sec">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-xs-12">
+									<div class="blog-post">
+										<div class="blog-post-thumb"> <a href="#" title=""><img src="/view/images/tarjetadecredito.png" alt="" /></a></div>
+										<div class="blog-detail">
+											<ul class="blog-metas">
+												<li><a href="#" title="">Servicios Financieros</a></li>
+											</ul>
+											<h3><a href="#" title="">Mis Actividades</a></h3>
+											<p>Dating is a part of the human mating process whereby two people meet socially for…</p>
+											<a href="#" title="">MORE</a>
+										</div>
+									</div><!-- BLog Post  -->
+								</div>
 							</div>
-						</a></div><!-- How it Works -->
-						<div class="how-it-works"><a href="/view/registro_usuario.php">
-							<div class="work-icon"> <img src="/view/images/icons/cursos.png" width="100" height="100" alt="" /> </div>
-							<div class="work-detail">
-								<h3>Cursos</h3>
-								<p>Consulta y descubre los cursos que ofrece esta plataforma.</p>
-								<span class="number">02</span>
+							<div class="pagination">
+								<ul>
+									<li class="prev"><a href=""><i class="la  la-arrow-left"></i></a></li>
+									<li><a href="">1</a></li>
+									<li><a class="active" href="">2</a></li>
+									<li><a href="">3</a></li>
+									<li><span class="delimeter">...</span></li>
+									<li><a href="">22</a></li>
+									<li class="next"><a href=""><i class="la  la-arrow-right"></i></a></li>
+								</ul>
 							</div>
-						</a></div><!-- How it Works -->
-						<div class="how-it-works"><a href="/view/miscursos.php">
-							<div class="work-icon"> <img src="/view/images/icons/miscursos.png" width="100" height="100" alt="" /> </div>
-							<div class="work-detail">
-								<h3>Mis Cursos</h3>
-								<p>Verifica todo lo relacionado a tus cursos inscritos: actividades, exámenes, evaluaciones,...</p>
-								<span class="number">03</span>
-							</a></div>
-						</div><!-- How it Works -->
-            <div class="how-it-works"><a href="/view/registro_usuario.php">
-							<div class="work-icon"> <img src="/view/images/icons/gastos.png" width="100" height="100" alt="" /> </div>
-							<div class="work-detail">
-								<h3>Mis Gastos</h3>
-								<p>Registra nuevos movimientos, ya sean ingresos o egresos, por cualquiera de tus métodos de pago.</p>
-								<span class="number">04</span>
-							</a></div>
-						</div><!-- How it Works -->
-            <div class="how-it-works"><a href="/view/usuarios/logout.php">
-							<div class="work-icon"> <img src="/view/images/icons/cerrarsesion.png" width="100" height="100" alt="" /> </div>
-							<div class="work-detail">
-								<h3>Cerrar Sesión</h3>
-                <span class="number">05</span>
-						</a></div>
-						</div><!-- How it Works -->
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
 	</section>
-
-
-
-    <!--  <section>
-          <div class="block gray">
-              <div class="container">
-                  <div class="row">
-                      <div class="col-md-10 col-md-offset-1">
-                        <div class="checkout-sec">
-                            <form class="steps" method="post" id='newuser' name="newuser" action="/src/Controller/controlador_usuario.php" enctype="multipart/form-data">
-                                <div class="form-profile">
-                                    <fieldset>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <h3>Menú Principal</h3><br>
-                                        </div>
-
-                                        <div class="row">
-                                          <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <div class="form_re">
-
-                                              <button type="button" class="btn btn-primary btn-lg btn-block" aria-pressed="true">Mi Perfil</button>
-                                              <br>
-                                              <button type="button" class="btn btn-primary btn-lg btn-block" aria-pressed="true">Cursos a Inscribir</button>
-                                              <br>
-                                              <button type="button" class="btn btn-primary btn-lg btn-block" aria-pressed="true">Mis Cursos</button>
-                                              <br>
-                                              <button type="button" class="btn btn-primary btn-lg btn-block" aria-pressed="true">Mis Gastos</button>
-                                              <br>
-                                              <button type="button" class="btn btn-primary btn-lg btn-block" aria-pressed="true">Cerrar Sesión</button>
-
-                                            </div>
-                                          </div>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </form>
-                          <div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>-->
 
 			<?php include_once($_SERVER["DOCUMENT_ROOT"] . "/view/common/footer.php");?>
       <?php include_once($_SERVER["DOCUMENT_ROOT"] . "/view/common/popups.php");?>
