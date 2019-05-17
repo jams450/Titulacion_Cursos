@@ -1,11 +1,11 @@
 <?php
-   /*session_start();
+   session_start();
     if (!isset($_SESSION['id_sesion_usuario'])) {
         header("location: ../../index.php");
     }
-    $error = isset($_GET['error']) ? 'block' : 'none';*/
+    $error = isset($_GET['error']) ? 'block' : 'none';
 ?>
-?>
+
 <!DOCTYPE html>
 	<head>
         <?php include_once($_SERVER["DOCUMENT_ROOT"] . "/view/common/head.php");?>
@@ -210,31 +210,8 @@
 				<div class="row">
 					<div class="col-md-8 column col-md-offset-2">
 						<div class="blog-sec">
-							<div class="row">
-								<div class="col-md-4 col-sm-4 col-xs-12">
-									<div class="blog-post">
-										<div class="blog-post-thumb"> <a href="#" title=""><img src="/view/images/tarjetadecredito.png" alt="" /></a></div>
-										<div class="blog-detail">
-											<ul class="blog-metas">
-												<li><a href="#" title="">Servicios Financieros</a></li>
-											</ul>
-											<h3><a href="#" title="">Mis Actividades</a></h3>
-											<p>Dating is a part of the human mating process whereby two people meet socially for…</p>
-											<a href="#" title="">MORE</a>
-										</div>
-									</div><!-- BLog Post  -->
-								</div>
-							</div>
-							<div class="pagination">
-								<ul>
-									<li class="prev"><a href=""><i class="la  la-arrow-left"></i></a></li>
-									<li><a href="">1</a></li>
-									<li><a class="active" href="">2</a></li>
-									<li><a href="">3</a></li>
-									<li><span class="delimeter">...</span></li>
-									<li><a href="">22</a></li>
-									<li class="next"><a href=""><i class="la  la-arrow-right"></i></a></li>
-								</ul>
+							<div class="row" id="miscursos">
+								        <!-- AQUI DEBEN ENTRAR LOS CURSOS-->
 							</div>
 						</div>
 					</div>
@@ -258,5 +235,23 @@
         <script type="text/javascript" src="assets/js/sweetalert2.min.js"></script>
         <script type="text/javascript" src="src/js/alta_usuario.js"></script>
 
+        <script>
+          $(document).ready(function() {
+            $.ajax({
+              url: '/src/Controller/controlador_cursos.php',
+              type: 'POST',
+              dataType: 'json',
+              data: {operacion: 'get'}
+            })
+            .done(function(e) {
+              var cursos=e;
+              for (var i = 0; i < cursos.length; i++) {
+                $('#miscursos').append(cursos[i]);
+              }
+            })
+
+          });
+
+        </script>
 	</body>
 </html>
