@@ -11,13 +11,14 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                   <div class="blog-post">
                     <div class="blog-post-thumb"> <a href="#" title=""><img src="/view/images/'.$result['imagen_curso'].'" alt="" /></a></div>
-                    <div class="blog-detail">
-                      <ul class="blog-metas">
-                        <li>Servicios Financieros</li>
-                      </ul>
-                      <h3><a href=/view/cursos/detalle_curso?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
-                    </div>
-                  </div><!-- BLog Post  -->
+                      <div class="blog-detail">
+                          <ul class="blog-metas">
+                            <li>Servicios Financieros</li>
+                          </ul>
+                          <h3><a href=/view/cursos/detalle_curso?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
+                      </div>
+                    </div><!-- BLog Post  -->
+                  </div>
                 </div>
             ';
             $cursos_a[]=$vista_cursos;

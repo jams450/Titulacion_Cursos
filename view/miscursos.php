@@ -1,5 +1,6 @@
 <?php
    session_start();
+   $_SESSION['id_sesion_usuario']=1;
     if (!isset($_SESSION['id_sesion_usuario'])) {
         header("location: ../../index.php");
     }
@@ -22,10 +23,6 @@
 
             #progressbar li {
                 width: 100%!important;
-            }
-
-            input#nombre, input#appat, input#apmat, input#edad, input#correo, input#password, input#usuario {
-                color: #d9042a;
             }
 
             input#file-2 {
@@ -184,45 +181,44 @@
 		</div>
 		<div class="theme-layout">
 
-			<?php include_once($_SERVER["DOCUMENT_ROOT"] . "/view/common/menu.php");?>
+        <?php include_once($_SERVER["DOCUMENT_ROOT"] . "/view/common/menu.php");?>
 
-			<section>
-				<div class="block no-padding">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="inner-header">
-									<h2>Mis Cursos</h2>
-									<ul class="breadcrumbs">
-										<li><a href="index.php" title="">Inicio</a></li>
-										<li>Mis Cursos</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+        			<section>
+        				<div class="block no-padding">
+        					<div class="container">
+        						<div class="row">
+        							<div class="col-md-12">
+        								<div class="inner-header">
+        									<h2>Mis Cursos</h2>
+        									<ul class="breadcrumbs">
+        										<li><a href="index.php" title="">Inicio</a></li>
+        										<li>Mis Cursos</li>
+        									</ul>
+        								</div>
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        			</section>
 
-  <section>
-    <div class="block gray ">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 column col-md-offset-2">
-						<div class="blog-sec">
-							<div class="row" id="miscursos">
-								        <!-- AQUI DEBEN ENTRAR LOS CURSOS-->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+          <section>
+            <div class="block gray ">
+        			<div class="container">
+        				<div class="row">
+        					<div class="col-md-8 column col-md-offset-2">
+        						<div class="blog-sec">
+        							<div class="row" id="miscursos">
+        								        <!-- AQUI DEBEN ENTRAR LOS CURSOS-->
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</section>
 
-	</section>
-
-			<?php include_once($_SERVER["DOCUMENT_ROOT"] . "/view/common/footer.php");?>
-      <?php include_once($_SERVER["DOCUMENT_ROOT"] . "/view/common/popups.php");?>
+        <?php include_once($_SERVER["DOCUMENT_ROOT"] . "/view/common/footer.php");?>
+        <?php include_once($_SERVER["DOCUMENT_ROOT"] . "/view/common/popups.php");?>
 
 		</div>
 
