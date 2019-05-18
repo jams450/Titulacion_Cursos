@@ -234,7 +234,7 @@
         <script>
           $(document).ready(function() {
             $.ajax({
-              url: '/src/Controller/controlador_cursos.php',
+              url: '/src/Controller/controlador_miscursos.php',
               type: 'POST',
               dataType: 'json',
               data: {operacion: 'get'}
