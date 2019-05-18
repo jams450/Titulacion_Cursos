@@ -104,7 +104,7 @@
                 title: 'Login correcto',
               });
               setTimeout(function(){
-                  window.open('/index.php');
+                  location.reload();
               }, 1500);
           }else {
             swal({

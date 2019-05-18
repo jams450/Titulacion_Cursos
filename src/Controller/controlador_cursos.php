@@ -43,4 +43,23 @@
         $conexion->close();
         die(json_encode($cursos_a));
         break;
+
+    case 'inscribir':
+      session_start();
+      if (isset($_SESSION['id_sesion_usuario'])) {
+          $stmt=$conexion->prepare("insert into inscripcion_cursos values (?,?,NULL,NULL,NULL)");
+          $stmt->bind_param("ii", $_POST['curso'], $_SESSION['id_sesion_usuario']);
+          $stmt->execute();
+          if ($stmt->affected_rows) {
+              $msj="exito";
+          } else {
+              $msj="error";
+          }
+          $stmt->close();
+          $conexion->close();
+          die(json_encode($msj));
+      } else {
+          die(json_encode('no_login'));
+      }
+      break;
     }

@@ -1,11 +1,92 @@
 <?php
     session_start();
+    if (!isset($_GET)) {
+        header("location: ../../index.php");
+    } else {
+        include_once($_SERVER["DOCUMENT_ROOT"] . "/src/Model/conexion.php");
+        $cursos_todos=$conexion->query("select cursos.*, avg(puntuacion) as puntuacion, count(idusuario) as cantidad_usuarios  FROM cursos left join inscripcion_cursos on inscripcion_cursos.idcurso = cursos.idcurso where cursos.idcurso = " . $_GET['id']. " group by cursos.idcurso ");
+        if ($result=$cursos_todos->fetch_assoc()) {
+            $informacion_curso=$result;
+
+            if ($informacion_curso['puntuacion']==null) {
+                $informacion_curso['puntuacion']=3;
+            }
+            //vista puntuacion
+            $vista_puntuacion='';
+            for ($i=0; $i < $informacion_curso['puntuacion']; $i++) {
+                $vista_puntuacion.='<b class="la la-star"></b>';
+            }
+            for ($i=0; $i < 5-$informacion_curso['puntuacion']; $i++) {
+                $vista_puntuacion.='<b class="la la-star-o"></b>';
+            }
+
+            $vista_temas="";
+            $cursos_info=$conexion->query("select * FROM info_cursos where idcurso = " . $_GET['id']);
+            while ($result=$cursos_info->fetch_assoc()) {
+                $vista_temas.='
+                  <div class="col-md-4 col-sm-6">
+                    <span style="color:#d90429"><i class="la la-check-circle tema"></i>'.$result['encabezado'].'</span>
+                  </div>
+                ';
+            }
+
+            $vista_reviews="";
+            $review_info=$conexion->query("select usuarios.idusuario,usuarios.nombre,usuarios.appat, puntuacion , comentario   FROM inscripcion_cursos  join usuarios on usuarios.idusuario = inscripcion_cursos.idusuario where idcurso= " . $_GET['id']);
+            while ($result=$review_info->fetch_assoc()) {
+                if (isset($_SESSION['id_sesion_usuario'])) {
+                    if ($result['idusuario']==$_SESSION['id_sesion_usuario']) {
+                        $ya_esta=true;
+                    }
+                }
+
+                if ($result['puntuacion']==null) {
+                    $vista_puntuacion_reviws='';
+                    for ($i=0; $i < $result['puntuacion']; $i++) {
+                        $vista_puntuacion_reviws.='<b class="la la-star"></b>';
+                    }
+                    for ($i=0; $i < 5-$result['puntuacion']; $i++) {
+                        $vista_puntuacion_reviws.='<b class="la la-star-o"></b>';
+                    }
+
+                    $vista_reviews.='
+                    <li>
+                      <div class="review-list">
+                        <div class="reviewer-info">
+                          <h3>'.$result['nombre'].' '.$result['appat'].'</h3>
+                          <p style="text-justify">'.$result['comentario'].'</p>
+                        </div>
+                        <div class="reviewer-stars">
+                          '.$vista_puntuacion_reviws.'
+                        </div>
+                      </div>
+                    </li>
+                  ';
+                }
+            }
+        }
+
+        $conexion->close();
+    }
 ?>
 <!DOCTYPE html>
 
 <head>
   <?php include_once('../common/head.php'); ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <style media="screen">
+  .tema {
+    color: #d90429;
+    float: left;
+    font-size: 21px;
+    margin-right: 10px;
+  }
+  #foto_portada{
+    background-image: url('/assets/images/cursos/<?=$informacion_curso['imagen_curso']?>');
+    background-repeat:no-repeat;
+    background-size: cover;
+
+  }
+  </style>
 </head>
 
 <body>
@@ -25,20 +106,12 @@
                 <div class="row">
                   <div class="list-detail-box" id="foto_portada">
                     <div class="list-detail-info">
-                      <h3 id="nombre_actividad">Nombre</h3>
+                      <h3 id="nombre_actividad"><?=$informacion_curso['nombrecurso']?></h3>
                       <br>
                       <div class="rated-list">
-                        <b class="la la-star"></b>
-                        <b class="la la-star"></b>
-                        <b class="la la-star"></b>
-                        <b class="la la-star-o"></b>
-                        <b class="la la-star-o"></b>
-                        <span>(###)</span>
+                        <?=$vista_puntuacion?>
+                        <span>(<?=$informacion_curso['cantidad_usuarios']?>)</span>
                       </div>
-
-
-                      <button class="write-review" id="reservar" type="submit">Inscribirse</button>
-
                     </div>
                   </div>
                 </div>
@@ -55,56 +128,38 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-md-12 column">
-                      <div class="description-detail-box" id="description">
-                        <h3 class="mini-title">DESCRIPTION</h3>
+                      <div class="description-detail-box" >
+                        <h3 class="mini-title">DESCRIPCION</h3>
                         <div class="detail-descriptions">
-                          <p>Curabitur lacinia erat quis nisi mollis, non pulvinar diam auctor. Integer ornare lobortis tristique. Vestibulum congue eleifend sapien, ac tristique nisi dapibus quis. Vivamus ligula erat, convallis nec leo vel, eleifend
-                            imperdiet lacus. Maecenas a euismod augue. Nam eu neque in velit fermentum finibus. Morbi sed lacus in odio ullamcorper facilisis. Vivamus maximus fringilla nisi, eget tristique elit mollis sit amet.</p>
-                          <p>Mauris in enim sit amet erat consequat vulputate. Donec ut justo nec est congue cursus sit amet aliquet lorem. In at eros id nisi sollicitudin consectetur at vel risus. Integer elit sapien, posuere nec augue non, tempus
-                            molestie est. Ut quis congue dui. Quisque finibus rhoncus nulla, nec consectetur nibh finibus sit amet. Duis eget justo venenatis nisi interdum facilisis non eget purus.</p>
+                          <p class="text-justify"><?=$informacion_curso['resumen']?></p>
                         </div>
                       </div>
 
-                      <div class="description-detail-box" id="description">
+                      <div class="description-detail-box" >
                         <h3 class="mini-title">Temas</h3>
                         <div class="detail-descriptions">
-                          <div class="amenities-sec">
-                            <span><i class="la la-check-circle"></i>Wi-Fi</span>
-                            <span><i class="la la-check-circle"></i>Daily Specials</span>
-                            <span><i class="la la-check-circle"></i>Take-out</span>
-                            <span><i class="la la-check-circle"></i>Free Parking</span>
-                            <span><i class="la la-check-circle"></i>Reservations</span>
-                            <span><i class="la la-check-circle"></i>Serves Alcoho</span>
-                            <span><i class="la la-check-circle"></i>Credit Card Payment</span>
-                            <span><i class="la la-check-circle"></i>Wheelchair Accessible</span>
-                            <span><i class="la la-check-circle"></i>Online Ordering</span>
+                          <div class="amenities-sec" >
+                            <?=$vista_temas?>
                           </div>
                         </div>
                       </div>
 
                       <div class="display-review-box" id="review">
-                        <h3 class="mini-title">revıew</h3>
+                        <h3 class="mini-title">revıewS</h3>
                         <div class="review-list-sec">
                           <ul>
-                            <li>
-                              <div class="review-list">
-                                <div class="reviewer-info">
-                                  <h3><a href="#" title="">Jamies Giroux</a></h3>
-                                  <span>7 months ago</span>
-                                  <p>Donec nec tristique sapien. Aliquam ante felis, sagittis sodales diam sollicitudin, dapibus semper turpis</p>
-                                </div>
-                                <div class="reviewer-stars">
-                                  <b class="la la-star"></b>
-                                  <b class="la la-star"></b>
-                                  <b class="la la-star"></b>
-                                  <b class="la la-star"></b>
-                                  <b class="la la-star"></b>
-                                </div>
-                              </div>
-                            </li>
+                            <?=$vista_reviews?>
                           </ul>
                         </div>
                       </div>
+                      <div style="margin-top:20px; float:left">
+                        <input type="hidden" name="curso" id="curso" value="<?=$_GET['id']?>">
+                        <?php if (!isset($ya_esta)) {
+    echo '<button class="write-review" id="inscribirse" type="submit">Inscribirse</button>';
+} ?>
+
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -123,7 +178,7 @@
   <!-- Script -->
   <?php include_once('../common/script.php'); ?>
   <script type="text/javascript" src="assets/js/choosen.min.js"></script><!-- Nice Select -->
-  <script type="text/javascript" src="assets/js/detalle_curso.js"></script><!-- Nice Select -->
+  <script type="text/javascript" src="src/js/detalle_curso.js"></script><!-- Nice Select -->
 </body>
 
 </html>
