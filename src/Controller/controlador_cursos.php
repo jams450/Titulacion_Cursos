@@ -62,4 +62,43 @@
           die(json_encode('no_login'));
       }
       break;
+
+      case 'examen':
+        session_start();
+        if (isset($_SESSION['id_sesion_usuario'])) {
+		  $usuario=$conexion->query("select promedio from inscripcion_cursos where idcurso = ".$_POST['curso']." and idusuario=".$_SESSION['id_sesion_usuario']);
+		  if($result=$usuario->fetch_assoc()){
+			if($result['promedio']==0){
+				$examen=$conexion->query("select correcta1, correcta2, correcta3, correcta4, correcta5, correcta6, correcta7, correcta8, correcta9, correcta10 from respuestas_examen where idcurso=".$_POST['curso']);
+				if ($result1=$examen->fetch_assoc()) {
+					  $respuestas=$result1;
+					  $calif=0;
+					  for ($i=1; $i < 11 ; $i++) {
+						if($respuestas['correcta'.$i] == $_POST['respuesta'.$i]){
+						  $calif = $calif + 1;
+						}
+					  }
+
+					  $stmt=$conexion->prepare("update inscripcion_cursos set promedio=? where  idcurso =? and idusuario=?");
+					  $stmt->bind_param('iii',$calif,$_POST['curso'],$_SESSION['id_sesion_usuario']);
+					  $stmt->execute();
+					  if ($stmt->affected_rows) {
+						  $msj="exito";
+					  } else {
+						  $msj="error";
+					  }
+					  $stmt->close();
+				}
+			}else{
+				$msj="yahizo";
+			}
+		  }
+
+		  $conexion->close();
+		  die(json_encode($msj));
+		}else {
+			  die(json_encode('no_login'));
+		  }
+
+        break;
     }
