@@ -3,7 +3,7 @@
     $operacion = $_POST['operacion'];
     switch ($operacion) {
       case 'get':
-        $cursos_todos=$conexion->query("select cursos.* FROM cursos left join inscripcion_cursos on inscripcion_cursos.idcurso = cursos.idcurso group by cursos.idcurso");
+        $cursos_todos=$conexion->query("select cursos.nombrecurso, cursos.imagen_curso FROM cursos left join inscripcion_cursos on inscripcion_cursos.idcurso = cursos.idcurso group by cursos.idcurso");
         while ($result=$cursos_todos->fetch_assoc()) {
 
             //vista curso
@@ -17,7 +17,7 @@
                           </ul>
                           <h3><a href=/view/cursos/detalle_curso?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
                       </div>
-                    </div><!-- BLog Post  -->
+                    </div><!-- Blog Post  -->
                   </div>
                 </div>
             ';
