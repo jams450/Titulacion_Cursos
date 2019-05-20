@@ -4,7 +4,6 @@
     if (!isset($_SESSION['id_sesion_usuario'])) {
         header("location: ../../index.php");
     }
-    $error = isset($_GET['error']) ? 'block' : 'none';
 ?>
 
 <!DOCTYPE html>
@@ -241,9 +240,9 @@
             })
             .done(function(e) {
               console.log(e);
-              /*var cursos=e;
+              var cursos=e;
               for (var i = 0; i < cursos.length; i++) {
-                $('#miscursos').append(cursos[i]);*/
+                $('#miscursos').append(cursos[i]);
               }
             })
 

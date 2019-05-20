@@ -3,7 +3,8 @@
     $operacion = $_POST['operacion'];
     switch ($operacion) {
       case 'get':
-        $cursos_todos=$conexion->query("select cursos.nombrecurso, cursos.imagen_curso FROM cursos right join inscripcion_cursos on inscripcion_cursos.idcurso = cursos.idcurso group by cursos.idcurso");
+        //die(json_encode('$cursos_a'));
+        $cursos_todos=$conexion->query("select cursos.idcurso, cursos.nombrecurso, cursos.imagen_curso FROM cursos right join inscripcion_cursos on inscripcion_cursos.idcurso = cursos.idcurso group by cursos.idcurso");
         while ($result=$cursos_todos->fetch_assoc()) {
 
             //vista curso
