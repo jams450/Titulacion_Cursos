@@ -1,18 +1,18 @@
 <?php
     if (!isset($_GET)) {
         header("location: ../../index.php");
-    } else{
-      include_once($_SERVER["DOCUMENT_ROOT"] . "/src/Model/conexion.php");
-      $examen=$conexion->query("select * from examenes_cursos where idcurso =". $_GET['id']);
-
-      $encabezado="";
-      if ($result=$examen->fetch_assoc()) {
-          $informacion_examen=$result;
-          $preguntas="";
-          $preguntas_examen=$conexion->query("select preguntas_cursos.pregunta, preguntas_cursos.respuesta1, preguntas_cursos.respuesta2, preguntas_cursos.respuesta3 from preguntas_cursos join examenes_cursos on preguntas_cursos.idexamen = examenes_cursos.idexamen WHERE examenes_cursos.idcurso=2". $_GET['id']);
-          $numero=1;
-		  while($result=$preguntas_examen->fetch_assoc()){
-            $preguntas.='
+    } else {
+        session_start();
+        include_once($_SERVER["DOCUMENT_ROOT"] . "/src/Model/conexion.php");
+        $examen=$conexion->query("select * from examenes_cursos where idcurso =". $_GET['id']);
+        $encabezado="";
+        if ($result=$examen->fetch_assoc()) {
+            $informacion_examen=$result;
+            $preguntas="";
+            $preguntas_examen=$conexion->query("select preguntas_cursos.pregunta, preguntas_cursos.respuesta1, preguntas_cursos.respuesta2, preguntas_cursos.respuesta3 from preguntas_cursos join examenes_cursos on preguntas_cursos.idexamen = examenes_cursos.idexamen WHERE examenes_cursos.idcurso=". $_GET['id']);
+            $numero=1;
+            while ($result=$preguntas_examen->fetch_assoc()) {
+                $preguntas.='
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <h4>'.$result['pregunta'].'</h4><br>
             </div>
@@ -42,11 +42,11 @@
       			</div>
 
             ';
-			      $numero=$numero+1;
-          }
+                $numero=$numero+1;
+            }
         }
         $conexion->close();
-      }
+    }
 ?>
 
      <!DOCTYPE html>
@@ -100,13 +100,13 @@
 					<div class="row">
 						<div>
 							<div class="checkout-sec">
-                                    <form class="steps" method="post" id='newuser' name="newuser" action="/src/Controller/controlador_cursos.php" enctype="multipart/form-data">
-                                        <div class="form-profile">
+                  <form class="steps" method="post" id='examen' name="examen" action="/src/Controller/controlador_cursos.php" enctype="multipart/form-data">
+                      <div class="form-profile">
 											<fieldset>
 												<?=$preguntas?>
                         <input type="hidden" name="curso" id="curso" value="<?=$_GET['id']?>">
 												<input type="hidden" name="operacion" id="operacion" value="examen">
-												<button type="submit" id="enviar_eval" name="enviar_eval" class="btn_guardar col-md-12 col-sm-12 col-xs-12" id="enviar_Eval">Enviar</button>
+												<button type="button" id="enviar_eval" name="enviar_eval" class="btn_guardar col-md-12 col-sm-12 col-xs-12" id="enviar_Eval">Enviar</button>
 											</fieldset>
 										</div>
 									</form>
@@ -125,7 +125,7 @@
       <!-- Script -->
       <?php include_once('../common/script.php'); ?>
       <script type="text/javascript" src="assets/js/choosen.min.js"></script><!-- Nice Select -->
-      <script type="text/javascript" src="src/js/examenes_cursos.js"></script><!-- Nice Select -->
+      <script type="text/javascript" src="src/js/examenes_curso.js"></script><!-- Nice Select -->
     </body>
 
     </html>
