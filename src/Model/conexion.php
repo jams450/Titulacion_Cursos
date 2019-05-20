@@ -2,8 +2,8 @@
     //conectar con la bd, esto normalmente va aparte, con include_once
     $direccion_db='localhost';
 
-    $password_db='';
-    $usuario_db='root';
+    $password_db='Zaam971212';
+    $usuario_db='userpt';
 
     $nombre_db='titulacion';
 
@@ -15,4 +15,3 @@
     }
 
     ?>
-

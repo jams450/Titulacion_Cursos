@@ -53,7 +53,9 @@ create table inscripcion_cursos
 (
 	idcurso int not null,
     idusuario int not null,
+
     promedio int, /*calificación de */
+
     puntuacion int,
     comentario varchar(280), /*cantidad máxima en Twitter*/
     primary key(idcurso,idusuario)
@@ -186,3 +188,4 @@ alter table respuestas_examen add index(idrespuestas);
 alter table respuestas_examen change idrespuestas idrespuestas int not null auto_increment;
 
 insert into respuestas_examen values (null,2,2,2,2,3,1,3,1,2,2,1,3);
+

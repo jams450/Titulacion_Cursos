@@ -16,7 +16,8 @@
         if (!isset($_SESSION["id_sesion_usuario"])) {
             ?>
             <div class="acount-header-btn">
-                <a href="view/registro_usuario.php" title="Hazte anfitrión" class="register-btn" >Registro</a>
+                <a href="/view/panel.php" title="Menú">Menú</a>
+                <a href="/view/registro_usuario.php" title="Registro" class="register-btn" >Registro</a>
                 <span class="login-btn">Login</span>
             </div>
       <?php
@@ -49,15 +50,17 @@
             <li class="menu-item-has-children">
                 <a href="#"><?=$_SESSION["nombre_usuario"]?></a>
                 <ul>
-                    <li><a href="view/ver_perfil.php" title="Ver perfil">Ver Perfil</a></li>
-                    <li><a href="view/anfitrion/panel.php" title="Ver perfil">Mis Cursos</a></li>
-                    <li><a href="view/usuarios/logout.php" title="Cerrar sesión">Cerrar sesión</a></li>
+                    <li><a href="view/ver_perfil.php" title="Mi Perfil">Mi Perfil</a></li>
+                    <li><a href="view/anfitrion/panel.php" title="Cursos">Cursos</a></li>
+                    <li><a href="view/usuarios/logout.php" title="Mis Gastos">Mis Gastos</a></li>
+                    <li><a href="view/usuarios/logout.php" title="Cerrar Sesión">Cerrar Sesión</a></li>
                 </ul>
             </li>
         <?php
             }
         ?>
             <li><a href="index.php" title="Inicio">Inicio</a></li>
+
 
             <li><a href="view/cursos/buscador_cursos.php" title="Inicio">Cursos</a></li>
 
@@ -73,7 +76,8 @@
             if (!isset($_SESSION["id_sesion_usuario"])) {
                 ?>
           <div class="acount-header-btn">
-              <a href="view/registro_usuario.php" title="Hazte anfitrión" class="register-btn" >Registro</a>
+              <a href="/view/panel.php" title="Menú" class="register-btn">Menú</a>
+              <a href="/view/registro_usuario.php" title="Registro" class="register-btn" >Registro</a>
               <span class="login-btn">Login</span>
           </div>
         <?php
@@ -86,9 +90,10 @@
                 <li class="menu-item-has-children imagen_log">
                     <a href="#" title="Imagen de perfil" style="margin-top: 10px;"><?=$_SESSION["nombre_usuario"]?></a>
                     <ul>
-                      <li><a href="view/ver_perfil.php" title="Ver perfil">Ver Perfil</a></li>
-                      <li><a href="view/anfitrion/panel.php" title="Ver perfil">Mis Cursos</a></li>
-                      <li><a href="view/usuarios/logout.php" title="Cerrar sesión">Cerrar sesión</a></li>
+                      <li><a href="view/ver_perfil.php" title="Mi Perfil">Mi Perfil</a></li>
+                      <li><a href="view/anfitrion/panel.php" title="Cursos">Cursos</a></li>
+                      <li><a href="view/usuarios/logout.php" title="Mis Gastos">Mis Gastos</a></li>
+                      <li><a href="view/usuarios/logout.php" title="Cerrar Sesión">Cerrar Sesión</a></li>
                     </ul>
                 </li>
             </ul>
@@ -101,7 +106,9 @@
         <nav class="header-menu">
             <ul>
                 <li><a href="index.php" title="Inicio">Inicio</a></li>
+              
                 <li><a href="view/cursos/buscador_cursos.php" title="Inicio">Cursos</a></li>
+
                 <li><a href="view/contacto.php" title="Contacto">Contacto</a></li>
             </ul>
         </nav>
