@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/estilos.css" type="text/css" /><!-- Style -->
     <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" /><!-- Responsive -->
     <link rel="stylesheet" href="assets/css/colors/colors.css" type="text/css" /><!-- color -->
-
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/sweetalert2.min.css">
     <!-- generics -->
     <link rel="icon" href="assets/images/logo/wiyoi32x32.png" sizes="32x32">
     <link rel="icon" href="assets/images/logo/57x57.png" sizes="57x57">

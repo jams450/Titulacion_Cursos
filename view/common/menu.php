@@ -61,18 +61,9 @@
         ?>
             <li><a href="index.php" title="Inicio">Inicio</a></li>
 
-            <li class="menu-item-has-children">
-                <a href="#" title="Cursos">Cursos</a>
-                <ul>
-                    <li><a href="view/servicio-actividad/actividad.php" title="Tarjeta de Débito">Tarjeta de Débito</a></li>
-                    <li><a href="view/servicio-alojamiento/alojamiento.php" title="Tarjeta de Crédito">Tarjeta de Crédito</a></li>
-                    <li><a href="view/servicio-coche/coche.php" title="Cuenta de Ahorro">Cuenta de Ahorro</a></li>
-                    <li><a href="view/servicio-gastronomia/gastronomia.php" title="Cuenta de Inversión">Cuenta de Inversión</a></li>
-                    <li><a href="view/servicio-alojamiento/alojamiento.php" title="Sistema de Ahorro para el Retiro">Sistema de Ahorro para el Retiro</a></li>
-                    <li><a href="view/servicio-coche/coche.php" title="Seguros">Seguros</a></li>
-                    <li><a href="view/servicio-gastronomia/gastronomia.php" title="Crédito Automotriz">Crédito Automotriz</a></li>
-                </ul>
-            </li>
+
+            <li><a href="view/cursos/buscador_cursos.php" title="Inicio">Cursos</a></li>
+
             <li><a href="view/contacto.php" title="Contacto">Contacto</a></li>
         </ul>
     </div>
@@ -97,7 +88,7 @@
         <nav class="header-menu">
             <ul>
                 <li class="menu-item-has-children imagen_log">
-                    <a href="#" title="Imagen de perfil"><?=$_SESSION["nombre_usuario"]?></a>
+                    <a href="#" title="Imagen de perfil" style="margin-top: 10px;"><?=$_SESSION["nombre_usuario"]?></a>
                     <ul>
                       <li><a href="view/ver_perfil.php" title="Mi Perfil">Mi Perfil</a></li>
                       <li><a href="view/anfitrion/panel.php" title="Cursos">Cursos</a></li>
@@ -115,18 +106,9 @@
         <nav class="header-menu">
             <ul>
                 <li><a href="index.php" title="Inicio">Inicio</a></li>
-                <li class="menu-item-has-children">
-                    <a href="#" title="Cusos">Cursos</a>
-                    <ul>
-                      <li><a href="view/servicio-actividad/actividad.php" title="Tarjeta de Débito">Tarjeta de Débito</a></li>
-                      <li><a href="view/servicio-alojamiento/alojamiento.php" title="Tarjeta de Crédito">Tarjeta de Crédito</a></li>
-                      <li><a href="view/servicio-coche/coche.php" title="Cuenta de Ahorro">Cuenta de Ahorro</a></li>
-                      <li><a href="view/servicio-gastronomia/gastronomia.php" title="Cuenta de Inversión">Cuenta de Inversión</a></li>
-                      <li><a href="view/servicio-alojamiento/alojamiento.php" title="Sistema de Ahorro para el Retiro">Sistema de Ahorro para el Retiro</a></li>
-                      <li><a href="view/servicio-coche/coche.php" title="Seguros">Seguros</a></li>
-                      <li><a href="view/servicio-gastronomia/gastronomia.php" title="Crédito Automotriz">Crédito Automotriz</a></li>
-                    </ul>
-                </li>
+              
+                <li><a href="view/cursos/buscador_cursos.php" title="Inicio">Cursos</a></li>
+
                 <li><a href="view/contacto.php" title="Contacto">Contacto</a></li>
             </ul>
         </nav>

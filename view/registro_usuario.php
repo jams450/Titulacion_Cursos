@@ -3,8 +3,6 @@
     if (isset($_SESSION['id_sesion_usuario'])) {
         header("location: ../../index.php");
     }
-    $error = isset($_GET['error']) ? 'block' : 'none';
-
 ?>
 <!DOCTYPE html>
     <head>
@@ -308,6 +306,7 @@
                                                     </div>
                                                   </div>
                                                 </div>
+                                                <input type="hidden" name="operacion" id="operacion" value="alta">
                                                   <button type="submit" id="registro_usuario" name="registro_usuario" class="btn_guardar col-md-12 col-sm-12 col-xs-12" id="crear_user">CREAR USUARIO</button>
                                               </form>
                                             </fieldset>

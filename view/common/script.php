@@ -23,6 +23,7 @@
 <!-- JIgowatt -->
 <script type="text/javascript" src="assets/js/poptrox.js"></script>
 <!-- Poptrox -->
+<script type="text/javascript" src="assets/js/sweetalert2.min.js"></script>
 <script type="text/javascript" src="assets/js/script.js"></script>
 <!-- Script -->
 
@@ -81,40 +82,39 @@
       unhighlight: function (element) {
         $(element).closest('.field-form').removeClass('has-error');
       },
-      submitHandler: function (form) {
-        form.preventDefault();
-        if ($("#log_in").valid()) {
-          form.preventDefault();
-          $(form).submit();
-        }
-      }
+
     });
 
-    $("#login").click(function(event) {
+
+    $(document).on('click','#login_boton',function(event) {
       event.preventDefault();
       if ($("#log_in").valid()) {
-        /*
+        var datos=$('#log_in').serializeArray();
         $.ajax({
-          url: '/src/Controller/altausuario.php',
-          type: 'default GET (Other values: POST)',
-          dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
-          data: {param1: 'value1'}
+          url: '/src/Controller/controlador_usuario.php',
+          type: 'POST',
+          dataType: 'JSON',
+          data: datos
         })
-        .done(function() {
-          console.log("success");
+        .done(function(e) {
+          var resultados=e;
+          if (resultados=='exito') {
+            swal({
+                type: 'success',
+                title: 'Login correcto',
+              });
+              setTimeout(function(){
+                  location.reload();
+              }, 1500);
+          }else {
+            swal({
+                type: 'error',
+                title: 'Ocurrio un error',
+                text: 'Alguno de los datos no son correctos',
+              })
+          }
         })
-        .fail(function() {
-          console.log("error");
-        })
-        .always(function() {
-          console.log("complete");
-        });*/
-        $('#leyenda_error').css('display', 'block');
-        $('#nombre_error').text('Información invalida');
-        $('#desc_error').text('El usuario o password son incorrectos');
       }
-
-
     });
 
   });
