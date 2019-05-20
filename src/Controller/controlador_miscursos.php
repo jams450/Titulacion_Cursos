@@ -11,12 +11,28 @@
             $vista_cursos='
                 <div class="col-md-4 col-sm-4 col-xs-12">
                   <div class="blog-post">
-                    <div class="blog-post-thumb"> <a href="#" title=""><img src="/view/images/'.$result['imagen_curso'].'" alt="" /></a></div>
+                    <div class="blog-post-thumb"> <a href="#" title=""><img src="/assets/images/cursos/'.$result['imagen_curso'].'" alt="" /></a></div>
                       <div class="blog-detail">
                           <ul class="blog-metas">
-                            <li>Servicios Financieros</li>
+                            <li>Estatus : En curso </li>
                           </ul>
-                          <h3><a href=/view/cursos/detalle_curso?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
+                          <div class="row">
+                            <div class="col-sm-8">
+                              <h3 class="h3_xd"><a href="/view/cursos/detalle_curso?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
+                            </div>
+                            <div class="col-sm-2 listing-rate-share">
+                              <a class="opc">
+                                <i class="la la-gear"></i>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="lista_opc" style="display:none">
+                            <ul >
+                              <li><a href="/view/cursos/curso?id='.$result['idcurso'].'" >Revisar Material</a></li>
+                              <li><a href="/view/cursos/detalle_curso?id='.$result['idcurso'].'" >Actividades</a></li>
+                              <li><a href="/view/cursos/examenes_cursos?id='.$result['idcurso'].'" >Examenes</a></li>
+                            </ul>
+                          </div>
                       </div>
                     </div><!-- Blog Post  -->
                   </div>

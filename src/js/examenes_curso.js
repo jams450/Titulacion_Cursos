@@ -42,3 +42,8 @@ $('#enviar_eval').click(function(event) {
   })
 
 });
+
+
+$('#regresar').click(function(event) {
+  document.location.href ='/view/miscursos.php';
+});

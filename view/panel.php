@@ -1,9 +1,8 @@
 <?php
-   /*session_start();
+   session_start();
     if (!isset($_SESSION['id_sesion_usuario'])) {
         header("location: ../../index.php");
     }
-    $error = isset($_GET['error']) ? 'block' : 'none';*/
 ?>
 <!DOCTYPE html>
 	<head>
@@ -216,7 +215,7 @@
 								<span class="number">01</span>
 							</div>
 						</a></div><!-- How it Works -->
-						<div class="how-it-works"><a href="/view/registro_usuario.php">
+						<div class="how-it-works"><a href="/view/cursos/buscador_cursos.php">
 							<div class="work-icon"> <img src="/view/images/icons/cursos.png" width="100" height="100" alt="" /> </div>
 							<div class="work-detail">
 								<h3>Cursos</h3>

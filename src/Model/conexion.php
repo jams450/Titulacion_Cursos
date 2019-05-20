@@ -2,8 +2,8 @@
     //conectar con la bd, esto normalmente va aparte, con include_once
     $direccion_db='localhost';
 
-    $password_db='Zaam971212';
-    $usuario_db='userpt';
+    $password_db='';
+    $usuario_db='root';
 
     $nombre_db='titulacion';
 
@@ -13,5 +13,3 @@
     if (mysqli_connect_errno()) {
         echo "Falló la conexión:". mysqli_connect_error();
     }
-
-    ?>

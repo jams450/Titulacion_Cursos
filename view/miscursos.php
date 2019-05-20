@@ -1,6 +1,5 @@
 <?php
    session_start();
-   $_SESSION['id_sesion_usuario']=1;
     if (!isset($_SESSION['id_sesion_usuario'])) {
         header("location: ../../index.php");
     }
@@ -169,6 +168,67 @@
                 list-style: none;
                 color: forestgreen;
             }
+            .blog-detail {
+                min-height: 0px;
+            }
+            .h3_xd {
+                color: #00171f;
+                float: left;
+                font-family: Roboto;
+                font-size: 18px;
+                font-weight: bold;
+                margin: 10px 0;
+                width: 100%;
+            }
+
+            .h3_xd > a{
+                color: #00171f;
+            }
+            .h3_xd > a:hover{
+                color: #D24743;
+            }
+            .col-sm-8,.col-sm-4{
+              padding-right: 0px;
+            }
+            .listing-rate-share > a {
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              -ms-border-radius: 50%;
+              -o-border-radius: 50%;
+              border-radius: 50%;
+              color: #ffffff;
+              float: right;
+              font-size: 20px;
+              height: 40px;
+              line-height: 40px;
+              margin-top: -30px;
+              text-align: center;
+              width: 40px;
+          }
+
+          .listing-rate-share {
+            background: #ffffff none repeat scroll 0 0;
+            -webkit-border-radius: 0 0 4px 4px;
+            -moz-border-radius: 0 0 4px 4px;
+            -ms-border-radius: 0 0 4px 4px;
+            -o-border-radius: 0 0 4px 4px;
+            border-radius: 0 0 4px 4px;
+            -webkit-box-shadow: 0px 0 0px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0px 0 0px rgba(0, 0, 0, 0.1);
+            -ms-box-shadow: 0px 0 0px rgba(0, 0, 0, 0.1);
+            -o-box-shadow: 0px 0 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0 0px rgba(0, 0, 0, 0.1);
+            float: left;
+            margin-bottom: 6px;
+            padding: 0 20px;
+            position: relative;
+            width: 100%;
+            z-index: 1;
+        }
+
+
+
+
 
         </style>
 	</head>
@@ -239,12 +299,20 @@
               data: {operacion: 'get'}
             })
             .done(function(e) {
-              console.log(e);
               var cursos=e;
               for (var i = 0; i < cursos.length; i++) {
                 $('#miscursos').append(cursos[i]);
               }
             })
+
+          });
+
+          $(document).on('click','.opc',function(e){
+            if ($(this).closest('.row').next().css('display') == 'none') {
+              $(this).closest('.row').next().slideDown( "slow" );
+            }else {
+              $(this).closest('.row').next().slideUp( "slow" );
+            }
 
           });
 

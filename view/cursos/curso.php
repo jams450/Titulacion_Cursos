@@ -2,9 +2,10 @@
     if (!isset($_GET)) {
         header("location: ../../index.php");
     } else {
+        session_start();
         include_once($_SERVER["DOCUMENT_ROOT"] . "/src/Model/conexion.php");
         $curso=$conexion->query("select * from cursos where idcurso =". $_GET['id']);
-
+        $contenido="";
         $encabezado="";
         if ($result=$curso->fetch_assoc()) {
             $informacion_curso=$result;
@@ -40,7 +41,7 @@
       #foto_portada{
         background-repeat:no-repeat;
         background-size: cover;
-
+        background-image: url('/assets/images/cursos/<?=$informacion_curso['imagen_curso']?>');
       }
       </style>
     </head>
