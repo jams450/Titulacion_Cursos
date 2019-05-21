@@ -29,18 +29,17 @@
                 <li><img src="assets/images/main_slider/home-banner2.jpg" alt="" /></li>
                 <li><img src="assets/images/main_slider/home-banner3.jpg" alt="" /></li>
                 <li><img src="assets/images/main_slider/home-banner4.jpg" alt="" /></li>
-
                 <li><img src="assets/images/main_slider/home-banner6.jpg" alt="" /></li>
               </ul>
               <div class="mian-featured-area">
                 <div class="main-featured-text">
                   <h1 style="color:#00171f">Cursos de educacion financiera AEF</h1>
-                  <span style="color:#00171f; font-weight: bold;">Algunos de los mejores cursos</span>
+                  <span style="color:#00171f; font-weight: bold;">Los mejores cursos al alcance de una Aplicación Web</span>
                 </div>
 
                 <div class="cat-lists">
                   <ul>
-                    <li><a href="/view/cursos/detalle_curso.php?id=1" title="Tarjeta"><i class="la la-credit-card"></i><span style="color:#00171f;">Tarjeta de credito</span></a></li>
+                    <li><a href="/view/cursos/detalle_curso.php?id=1" title="Tarjeta"><i class="la la-credit-card"></i><span style="color:#00171f;">Tarjeta de Crédito</span></a></li>
                     <li><a href="/view/cursos/detalle_curso.php?id=1" title="Ahorro"><i class="la la la-bank"></i><span style="color:#00171f;">Cuenta de Ahorro</span></a></li>
                     <li><a href="/view/cursos/detalle_curso.php?id=1" title="Seguros"><i class="la la la-shield"></i><span style="color:#00171f;">Seguros</span></a></li>
                   </ul>

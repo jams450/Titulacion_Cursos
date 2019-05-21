@@ -11,7 +11,7 @@
             $vista_cursos='
                 <div class="col-md-4 col-sm-4 col-xs-12">
                   <div class="blog-post">
-                    <div class="blog-post-thumb"> <a href="#" title=""><img src="/assets/images/cursos/'.$result['imagen_curso'].'" alt="" /></a></div>
+                    <div class="blog-post-thumb"> <a href="#" title=""><img src="/assets/images/cursos/'.$result['imagen_curso'].'" alt="" height="130" /></a></div>
                       <div class="blog-detail">
                           <ul class="blog-metas">
                             <li>Estatus : En curso </li>
