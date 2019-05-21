@@ -1,12 +1,14 @@
 $('#enviar_eval').click(function(event) {
+  var respuestas = $('#examen').serializeArray();
 
   $.ajax({
     url: '/src/Controller/controlador_cursos.php',
     type: 'POST',
     dataType: 'json',
-    data: {operacion: 'examen', curso: $('#curso').val()}
+    data: respuestas
   })
   .done(function(e) {
+    console.log(e);
     switch (e) {
       case 'exito':
         swal({
@@ -39,4 +41,9 @@ $('#enviar_eval').click(function(event) {
     }
   })
 
+});
+
+
+$('#regresar').click(function(event) {
+  document.location.href ='/view/miscursos.php';
 });
