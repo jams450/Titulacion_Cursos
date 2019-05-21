@@ -53,20 +53,22 @@ create table inscripcion_cursos
 (
 	idcurso int not null,
     idusuario int not null,
+<<<<<<< HEAD
+    promedio int, /*calificación promedio como resultado de las calificaciones en las actividades*/
+=======
 
     promedio int, /*calificación de */
 
+>>>>>>> 9750d0895acfa3f94f326668de9e8723d82f054b
     puntuacion int,
     comentario varchar(280), /*cantidad máxima en Twitter*/
     primary key(idcurso,idusuario)
 );
 alter table inscripcion_cursos add foreign key (idcurso) references cursos(idcurso);
 alter table inscripcion_cursos add foreign key (idusuario) references usuarios(idusuario);
-insert into inscripcion_cursos values (2,2,null,null,null);
-update inscripcion_cursos set promedio=9 where  idcurso =2 and idusuario=1
-
-select promedio from inscripcion_cursos where idcurso =2 and idusuario=2
-select * from inscripcion_cursos
+insert into inscripcion_cursos values(1,1,0,0,"Prueba");
+insert into inscripcion_cursos values(2,1,0,0,"Prueba");
+select inscripcion_cursos.idusuario, cursos.nombrecurso, cursos.imagen_curso FROM cursos right join inscripcion_cursos on inscripcion_cursos.idcurso = cursos.idcurso group by cursos.idcurso
 /*create table calificaciones
 (
 	idcurso int not null,
@@ -92,7 +94,7 @@ drop table actividades_alumnos;
 create table actividades_alumnos
 (
 	idcurso int not null,
-    idactividad int not null,
+    idactividad int not null, 
     idusuario int not null,
     ubicacion varchar(255),
     estatusactividad bit, /*0 - Por concluir, 1 - Concluida*/
@@ -133,8 +135,7 @@ insert into examenes_cursos values (null,1, "Examen: Tarjeta de Debito");
 insert into examenes_cursos values (null,2, "Examen: Tarjeta de Crédito");
 insert into examenes_cursos values (null,6, "Examen: Cuenta de Ahorro");
 
-select * from examenes_cursos where idcurso = 2
-
+select * from examenes_cursos where idcurso = 2;
 
 create table preguntas_cursos
 (
@@ -180,12 +181,16 @@ create table respuestas_examen
     correcta9 int,
     correcta10 int,
     primary key (idrespuestas,idexamen,idcurso)
-)
+);
 
-drop table respuestas_examen
+/*drop table respuestas_examen;*/
 alter table respuestas_examen add foreign key (idexamen) references examenes_cursos(idexamen);
 alter table respuestas_examen add index(idrespuestas);
 alter table respuestas_examen change idrespuestas idrespuestas int not null auto_increment;
 
+<<<<<<< HEAD
+insert into respuestas_examen values (null,2,2,2,2,3,1,3,1,2,2,1,3);
+=======
 insert into respuestas_examen values (null,2,2,2,2,3,1,3,1,2,2,1,3);
 
+>>>>>>> 9750d0895acfa3f94f326668de9e8723d82f054b
