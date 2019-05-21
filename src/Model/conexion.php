@@ -11,5 +11,8 @@
     if (mysqli_connect_errno()) {
         echo "Falló la conexión:". mysqli_connect_error();
     }
+<<<<<<< HEAD
 
     ?>
+=======
+>>>>>>> 9750d0895acfa3f94f326668de9e8723d82f054b

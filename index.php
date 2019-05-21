@@ -40,9 +40,9 @@
 
                 <div class="cat-lists">
                   <ul>
-                    <li><a href="" title="Tarjeta"><i class="la la-credit-card"></i><span style="color:#00171f;">Tarjeta de credito</span></a></li>
-                    <li><a href="" title="Ahorro"><i class="la la la-bank"></i><span style="color:#00171f;">Cuenta de Ahorro</span></a></li>
-                    <li><a href="" title="Seguros"><i class="la la la-shield"></i><span style="color:#00171f;">Seguros</span></a></li>
+                    <li><a href="/view/cursos/detalle_curso.php?id=1" title="Tarjeta"><i class="la la-credit-card"></i><span style="color:#00171f;">Tarjeta de credito</span></a></li>
+                    <li><a href="/view/cursos/detalle_curso.php?id=1" title="Ahorro"><i class="la la la-bank"></i><span style="color:#00171f;">Cuenta de Ahorro</span></a></li>
+                    <li><a href="/view/cursos/detalle_curso.php?id=1" title="Seguros"><i class="la la la-shield"></i><span style="color:#00171f;">Seguros</span></a></li>
                   </ul>
                 </div>
                 <a style="color:#00171f;" class="arrow-down floating" href="#scroll-here" title=""><i style="color:#00171f;" class="la la-angle-down"></i></a>
@@ -68,17 +68,17 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="dt-box">
-                        <a href="" target="_self" title=""><img style="height: 400px;" src="assets/images/home/cursos.jpg" sy alt="" /><span>Ver Cursos</span></a>
+                        <a href="/view/cursos/buscador_cursos.php" target="_self" title=""><img style="height: 400px;" src="assets/images/home/cursos.jpg" sy alt="" /><span>Ver Cursos</span></a>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="dt-box">
-                        <a href="" target="_self" title=""><img style="height: 330px;" src="assets/images/home/checklist.png" alt="" /><span>Registrarse</span></a>
+                        <a href="/view/registro_usuario.php" target="_self" title=""><img style="height: 330px;" src="assets/images/home/checklist.png" alt="" /><span>Registrarse</span></a>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="dt-box">
-                        <a href="" target="_self" title=""><img src="assets/images/home/gastos.jpg" alt="" /><span>Control de Gastos</span></a>
+                        <a href="" target="_self" title=""><img src="assets/images/home/gastos.jpg" alt="" /><span>Control de Gastos Proximamente</span></a>
                       </div>
                     </div>
                   </div>

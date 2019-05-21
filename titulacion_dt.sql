@@ -53,7 +53,13 @@ create table inscripcion_cursos
 (
 	idcurso int not null,
     idusuario int not null,
+<<<<<<< HEAD
     promedio int, /*calificación promedio como resultado de las calificaciones en las actividades*/
+=======
+
+    promedio int, /*calificación de */
+
+>>>>>>> 9750d0895acfa3f94f326668de9e8723d82f054b
     puntuacion int,
     comentario varchar(280), /*cantidad máxima en Twitter*/
     primary key(idcurso,idusuario)
@@ -182,4 +188,9 @@ alter table respuestas_examen add foreign key (idexamen) references examenes_cur
 alter table respuestas_examen add index(idrespuestas);
 alter table respuestas_examen change idrespuestas idrespuestas int not null auto_increment;
 
+<<<<<<< HEAD
 insert into respuestas_examen values (null,2,2,2,2,3,1,3,1,2,2,1,3);
+=======
+insert into respuestas_examen values (null,2,2,2,2,3,1,3,1,2,2,1,3);
+
+>>>>>>> 9750d0895acfa3f94f326668de9e8723d82f054b
