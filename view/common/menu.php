@@ -63,7 +63,7 @@
 
             <li><a href="view/cursos/buscador_cursos.php" title="Inicio">Cursos</a></li>
 
-            <li><a href="view/contacto.php" title="Contacto">Contacto</a></li>
+
         </ul>
     </div>
 </div>
@@ -107,7 +107,7 @@
 
                 <li><a href="view/cursos/buscador_cursos.php" title="Inicio">Cursos</a></li>
 
-                <li><a href="view/contacto.php" title="Contacto">Contacto</a></li>
+              
             </ul>
         </nav>
     </div>

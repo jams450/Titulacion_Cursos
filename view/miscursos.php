@@ -225,11 +225,12 @@
             width: 100%;
             z-index: 1;
         }
-
-
-
-
-
+        li{
+          list-style: none;
+        }
+        ul{
+          padding-left: 10px;
+        }
         </style>
 	</head>
   <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="

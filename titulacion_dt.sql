@@ -247,7 +247,7 @@ insert into contenido_curso values (null,2,"¿Qué es y quién la otorga?",'<div
                                   <p>Es un préstamo que te hace una Institución Financiera donde te otorga una línea de crédito que si no pagas por completo en tu fecha de pago no será barato.</p>
                                 </div>
                                 <div class="col-md-4 col-sm-5 col-xs-12">
-									<img src="view/images/CursoTC1.png" width="100%" height="50%">
+									<img src="assets/images/cursos/2/CursoTC1.png" width="100%" height="50%">
                                 </div>
                               </div>
                             </div>
@@ -266,7 +266,7 @@ insert into contenido_curso values (null,2,"¿Qué es y quién la otorga?",'<div
                             <div class="menu-restaurant">
                               <div class="row">
 							  <div class="col-md-4 col-sm-5 col-xs-12">
-									<img src="view/images/CursoTC2.png" width="100%" height="50%">
+									<img src="assets/images/cursos/2/CursoTC2.png" width="100%" height="50%">
                                 </div>
                                 <div class="col-md-8 col-sm-7 col-xs-12">
                                   <p>Instituciones Financieras tales como:</p>
@@ -315,7 +315,7 @@ insert into contenido_curso values (null,2,"¿Qué es y quién la otorga?",'<div
 									</div>
                                 </div>
 								<div class="col-md-8 col-sm-7 col-xs-12">
-									<img src="view/images/CursoTC3.png" width="100%" height="50%">
+									<img src="assets/images/cursos/2/CursoTC3.png" width="100%" height="50%">
                                 </div>
 
                               </div>
@@ -340,7 +340,7 @@ insert into contenido_curso values (null,2,"Características y Beneficios",'<div
 									</ul>
                                 </div>
                                 <div class="col-md-4 col-sm-5 col-xs-12">
-									<img src="view/images/CursoTC4.png" width="100%" height="50%">
+									<img src="assets/images/cursos/2/CursoTC4.png" width="100%" height="50%">
                                 </div>
                               </div>
                             </div>
@@ -359,7 +359,7 @@ insert into contenido_curso values (null,2,"Características y Beneficios",'<div
                             <div class="menu-restaurant">
                               <div class="row">
 							  <div class="col-md-4 col-sm-5 col-xs-12">
-									<img src="view/images/CursoTC5.png" width="100%" height="50%">
+									<img src="assets/images/cursos/2/CursoTC5.png" width="100%" height="50%">
                                 </div>
                                 <div class="col-md-8 col-sm-7 col-xs-12">
                                   <p>Algunas tarjetas  cobran una anualidad por su servicio. Es  es una comisión que cobran los bancos por tener acceso en cualquier momento a la línea de crédito y por la disponibilidad de los beneficios adicionales de este instrumento, como son los seguros, recompensas y demás.</p>
@@ -386,7 +386,7 @@ insert into contenido_curso values (null,2,"Características y Beneficios",'<div
 
                                 </div>
 								<div class="col-md-8 col-sm-7 col-xs-12">
-									<img src="view/images/CursoTC6.png" width="100%" height="50%">
+									<img src="assets/images/cursos/2/CursoTC6.png" width="100%" height="50%">
                                 </div>
 
                               </div>
@@ -403,7 +403,7 @@ insert into contenido_curso values (null,2,"Características y Beneficios",'<div
                             <div class="menu-restaurant">
                               <div class="row">
 							  <div class="col-md-8 col-sm-7 col-xs-12">
-									<img src="view/images/CursoTC7.png" width="100%" height="50%">
+									<img src="assets/images/cursos/2/CursoTC7.png" width="100%" height="50%">
                                 </div>
                                 <div class="col-md-4 col-sm-5 col-xs-12">
 									<ul>
@@ -429,7 +429,7 @@ insert into contenido_curso values (null,2,"Línea de Crédito",'<div class="col
 									<p>Normalmente depende de tu ingreso mensual comprobable</p>
                                 </div>
                                 <div class="col-md-8 col-sm-7 col-xs-12">
-									<img src="view/images/CursoTC8.png" width="100%" height="50%">
+									<img src="assets/images/cursos/2/CursoTC8.png" width="100%" height="50%">
                                 </div>
                               </div>
                             </div>
@@ -443,7 +443,7 @@ insert into contenido_curso values (null,2,"Línea de Crédito",'<div class="col
                               <div class="row">
 							  <div class="col-md-12">
 									<center>
-										<img src="view/images/CursoTC9.png" width="100%" height="70%" >
+										<img src="assets/images/cursos/2/CursoTC9.png" width="100%" height="70%" >
 									</center>
                                 </div>
                                 <div class="col-md-12">
@@ -471,7 +471,7 @@ insert into contenido_curso values (null,2,"Línea de Crédito",'<div class="col
 
                                 </div>
 								<div class="col-md-12">
-									<img src="view/images/CursoTC10.png" width="100%" height="50%">
+									<img src="assets/images/cursos/2/CursoTC10.png" width="100%" height="50%">
                                 </div>
 
                               </div>
@@ -498,7 +498,7 @@ insert into contenido_curso values (null,2,"Línea de Crédito",'<div class="col
 </p>
                                 </div>
                                 <div class="col-md-12">
-									<img src="view/images/CursoTC11.png" width="100%" height="50%">
+									<img src="assets/images/cursos/2/CursoTC11.png" width="100%" height="50%">
                                 </div>
                               </div>
                             </div>
