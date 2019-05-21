@@ -13,6 +13,9 @@ $('#inscribirse').click(function(event) {
           type: 'success',
           title: 'Ha sido incrito al curso '+$('#nombre_actividad').text(),
         });
+        setTimeout(function(){
+          document.location.href ='/view/miscursos.php';
+        }, 1500);
         break;
       case 'error':
         swal({

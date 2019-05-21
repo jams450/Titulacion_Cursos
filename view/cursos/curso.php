@@ -2,6 +2,7 @@
   if (!isset($_GET)) {
         header("location: ../../index.php");
     } else {
+
         include_once($_SERVER["DOCUMENT_ROOT"] . "/src/Model/conexion.php");
 		$curso=$conexion->query("select * from cursos where idcurso =". $_GET['id']);
         $encabezado="";
@@ -31,6 +32,7 @@
 					$numero=$numero+1;
 			}
 		}
+
         $conexion->close();
     }
 ?>
@@ -50,6 +52,7 @@
  <!-- Include multiselect CSS: -->
  <link rel="stylesheet" href="assets/css/bootstrap-multiselect.css" type="text/css" />
 </head>
+
 
 <body>
  <div class="page-loading">

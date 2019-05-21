@@ -4,7 +4,7 @@
 <div class="responive-header">
     <div class="logo">
         <a href="index.php" title="Imagen del logo">
-            <img src="assets/images/logo/96x96.png" alt="Imagen del logo" />
+            <img src="assets/images/logos/logo.png" style="height:96px" alt="Imagen del logo" />
         </a>
     </div>
     <span class="open-responsive-btn">
@@ -16,7 +16,7 @@
         if (!isset($_SESSION["id_sesion_usuario"])) {
             ?>
             <div class="acount-header-btn">
-                <a href="view/registro_usuario.php" title="Hazte anfitrión" class="register-btn" >Registro</a>
+                <a href="/view/registro_usuario.php" title="Registro" class="register-btn" >Registro</a>
                 <span class="login-btn">Login</span>
             </div>
       <?php
@@ -38,7 +38,7 @@
         </span>
         <div class="logo">
             <a href="index.html" title="Imagen del logo">
-                <img src="assets/images/logo/96x96.png" alt="Imagen del logo" />
+                <img src="assets/images/logos/logo.png" style="height:96px"  alt="Imagen del logo" />
             </a>
         </div>
         <ul>
@@ -49,15 +49,17 @@
             <li class="menu-item-has-children">
                 <a href="#"><?=$_SESSION["nombre_usuario"]?></a>
                 <ul>
-                    <li><a href="view/ver_perfil.php" title="Ver perfil">Ver Perfil</a></li>
-                    <li><a href="view/anfitrion/panel.php" title="Ver perfil">Mis Cursos</a></li>
-                    <li><a href="view/usuarios/logout.php" title="Cerrar sesión">Cerrar sesión</a></li>
+                    <li><a href="view/panel.php" title="Mi Perfil">Menu</a></li>
+                    <li><a href="view/cursos/buscador_cursos.php" title="Cursos">Cursos</a></li>
+                    <li><a href="view/ver_perfil.php" title="Mis Gastos">Perfil</a></li>
+                    <li><a href="view/usuarios/logout.php" title="Cerrar Sesión">Cerrar Sesión</a></li>
                 </ul>
             </li>
         <?php
             }
         ?>
             <li><a href="index.php" title="Inicio">Inicio</a></li>
+
 
             <li><a href="view/cursos/buscador_cursos.php" title="Inicio">Cursos</a></li>
 
@@ -67,13 +69,13 @@
 </div>
 <!-- Responsive-header -->
 <header class="on-top">
-    <div class="logo"><a href="index.php" title="Imagen del logo"><img src="assets/images/logo/96x96.png" alt="Imagen del logo" /></a></div>
+    <div class="logo"><a href="index.php" title="Imagen del logo"><img src="assets/images/logos/logo.png"  style="height:96px" alt="Imagen del logo" /></a></div>
     <div class="menu-sec">
         <?php
             if (!isset($_SESSION["id_sesion_usuario"])) {
                 ?>
           <div class="acount-header-btn">
-              <a href="view/registro_usuario.php" title="Hazte anfitrión" class="register-btn" >Registro</a>
+              <a href="/view/registro_usuario.php" title="Registro" class="register-btn" >Registro</a>
               <span class="login-btn">Login</span>
           </div>
         <?php
@@ -86,9 +88,10 @@
                 <li class="menu-item-has-children imagen_log">
                     <a href="#" title="Imagen de perfil" style="margin-top: 10px;"><?=$_SESSION["nombre_usuario"]?></a>
                     <ul>
-                      <li><a href="view/ver_perfil.php" title="Ver perfil">Ver Perfil</a></li>
-                      <li><a href="view/anfitrion/panel.php" title="Ver perfil">Mis Cursos</a></li>
-                      <li><a href="view/usuarios/logout.php" title="Cerrar sesión">Cerrar sesión</a></li>
+                      <li><a href="view/panel.php" title="Mi Perfil">Menu</a></li>
+                      <li><a href="view/cursos/buscador_cursos.php" title="Cursos">Cursos</a></li>
+                      <li><a href="view/ver_perfil.php" title="Mis Gastos">Perfil</a></li>
+                      <li><a href="view/usuarios/logout.php" title="Cerrar Sesión">Cerrar Sesión</a></li>
                     </ul>
                 </li>
             </ul>
@@ -101,7 +104,9 @@
         <nav class="header-menu">
             <ul>
                 <li><a href="index.php" title="Inicio">Inicio</a></li>
+
                 <li><a href="view/cursos/buscador_cursos.php" title="Inicio">Cursos</a></li>
+
                 <li><a href="view/contacto.php" title="Contacto">Contacto</a></li>
             </ul>
         </nav>
