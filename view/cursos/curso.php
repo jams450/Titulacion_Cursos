@@ -4,12 +4,13 @@
     } else {
 
         include_once($_SERVER["DOCUMENT_ROOT"] . "/src/Model/conexion.php");
-		$curso=$conexion->query("select * from cursos where idcurso =2");
+		$curso=$conexion->query("select * from cursos where idcurso =". $_GET['id']);
         $encabezado="";
         if ($result=$curso->fetch_assoc()) {
-			$contenidos=$conexion->query("select tema, codigo, nombrecurso from contenido_curso join cursos on contenido_curso.idcurso = cursos.idcurso where cursos.idcurso=2");
+			$contenidos=$conexion->query("select tema, codigo, nombrecurso from contenido_curso join cursos on contenido_curso.idcurso = cursos.idcurso where cursos.idcurso=". $_GET['id']);
 
-			$encabezado=$resul['nombrecurso'];
+			$encabezado=$result['nombrecurso'];
+			$resumen=$result['resumen'];
 			$numero=1;
 			while ($result=$contenidos->fetch_assoc()) {
 					if($numero==1){
