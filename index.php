@@ -39,9 +39,15 @@
 
                 <div class="cat-lists">
                   <ul>
+<<<<<<< HEAD
                     <li><a href="/view/cursos/detalle_curso.php?id=1" title="Tarjeta"><i class="la la-credit-card"></i><span style="color:#00171f;">Tarjeta de Crédito</span></a></li>
                     <li><a href="/view/cursos/detalle_curso.php?id=1" title="Ahorro"><i class="la la la-bank"></i><span style="color:#00171f;">Cuenta de Ahorro</span></a></li>
                     <li><a href="/view/cursos/detalle_curso.php?id=1" title="Seguros"><i class="la la la-shield"></i><span style="color:#00171f;">Seguros</span></a></li>
+=======
+                    <li><a href="/view/cursos/detalle_curso.php?id=2" title="Tarjeta"><i class="la la-credit-card"></i><span style="color:#00171f;">Tarjeta de credito</span></a></li>
+                    <li><a href="/view/cursos/detalle_curso.php?id=3" title="Ahorro"><i class="la la la-bank"></i><span style="color:#00171f;">Cuenta de Ahorro</span></a></li>
+                    <li><a href="/view/cursos/detalle_curso.php?id=6" title="Seguros"><i class="la la la-shield"></i><span style="color:#00171f;">Seguros</span></a></li>
+>>>>>>> ee15912304dccfaee1802fa00a3eb0cf71f3a886
                   </ul>
                 </div>
                 <a style="color:#00171f;" class="arrow-down floating" href="#scroll-here" title=""><i style="color:#00171f;" class="la la-angle-down"></i></a>

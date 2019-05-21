@@ -4,7 +4,7 @@
 <div class="responive-header">
     <div class="logo">
         <a href="index.php" title="Imagen del logo">
-            <img src="assets/images/logo/96x96.png" alt="Imagen del logo" />
+            <img src="assets/images/logos/logo.png" style="height:96px" alt="Imagen del logo" />
         </a>
     </div>
     <span class="open-responsive-btn">
@@ -38,7 +38,7 @@
         </span>
         <div class="logo">
             <a href="index.html" title="Imagen del logo">
-                <img src="assets/images/logo/96x96.png" alt="Imagen del logo" />
+                <img src="assets/images/logos/logo.png" style="height:96px"  alt="Imagen del logo" />
             </a>
         </div>
         <ul>
@@ -63,13 +63,13 @@
 
             <li><a href="view/cursos/buscador_cursos.php" title="Inicio">Cursos</a></li>
 
-            <li><a href="view/contacto.php" title="Contacto">Contacto</a></li>
+
         </ul>
     </div>
 </div>
 <!-- Responsive-header -->
 <header class="on-top">
-    <div class="logo"><a href="index.php" title="Imagen del logo"><img src="assets/images/logo/96x96.png" alt="Imagen del logo" /></a></div>
+    <div class="logo"><a href="index.php" title="Imagen del logo"><img src="assets/images/logos/logo.png"  style="height:96px" alt="Imagen del logo" /></a></div>
     <div class="menu-sec">
         <?php
             if (!isset($_SESSION["id_sesion_usuario"])) {
@@ -107,7 +107,7 @@
 
                 <li><a href="view/cursos/buscador_cursos.php" title="Inicio">Cursos</a></li>
 
-                <li><a href="view/contacto.php" title="Contacto">Contacto</a></li>
+              
             </ul>
         </nav>
     </div>
