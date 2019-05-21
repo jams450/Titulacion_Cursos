@@ -22,11 +22,7 @@
             <div class="col-md-4 col-sm-6 col-xs-12 bloque_curso" id="'.$result['nombrecurso'].'" >
               <div class="listing-box">
                 <div class="listing-box-thumb">
-<<<<<<< HEAD
                   <img src="/assets/images/cursos/'.$result['imagen_curso'].'" alt="" height="200" width="150">
-=======
-                  <img src="/assets/images/cursos/'.$result['imagen_curso'].'" style="height:250px" alt="">
->>>>>>> ee15912304dccfaee1802fa00a3eb0cf71f3a886
                   <div class="listing-box-title">
                     <h3><a href="/view/cursos/detalle_curso?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
                     <span>'.$result['resumen'].'</span>
