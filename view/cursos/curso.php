@@ -35,8 +35,8 @@
           }
       }
 
-      $curso=$conexion->query("select * from inscripcion_cursos where idusuario=".$_SESSION['id_sesion_usuario']." idcurso =". $_GET['id']);
-      if ($resul=$curso->fetch_assoc()) {
+      $terminado=$conexion->query("select * from inscripcion_cursos where idusuario=".$_SESSION['id_sesion_usuario']." and idcurso =". $_GET['id']);
+      if ($terminado=$curso->fetch_assoc()) {
           $curso_ter=$resul['curso'];
       }
       $conexion->close();
