@@ -4,7 +4,8 @@
     switch ($operacion) {
       case 'get':
         //die(json_encode('$cursos_a'));
-        $cursos_todos=$conexion->query("select cursos.idcurso, cursos.nombrecurso, cursos.imagen_curso , promedio , curso FROM cursos right join inscripcion_cursos on inscripcion_cursos.idcurso = cursos.idcurso group by cursos.idcurso");
+        session_start();
+        $cursos_todos=$conexion->query("select cursos.idcurso, cursos.nombrecurso, cursos.imagen_curso , promedio , curso FROM cursos right join inscripcion_cursos on inscripcion_cursos.idcurso = cursos.idcurso where idusuario=".$_SESSION['id_sesion_usuario']." group by cursos.idcurso");
         while ($result=$cursos_todos->fetch_assoc()) {
             if ($result['promedio'] != 0) {
                 $icono_examen='<i style="color:green; font-size: 22px" class="la la-check"></i>';
