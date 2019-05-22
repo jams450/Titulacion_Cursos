@@ -8,13 +8,15 @@ $('#enviar_eval').click(function(event) {
     data: respuestas
   })
   .done(function(e) {
-    console.log(e);
     switch (e) {
       case 'exito':
         swal({
           type: 'success',
-          title: 'Has completado el '+$('#nombre_actividad').text(),
+          title: 'Has completado el examen de '+$('#nombre_actividad').text(),
         });
+        setTimeout(function(){
+          location.reload();
+        }, 1500);
         break;
       case 'error':
         swal({
