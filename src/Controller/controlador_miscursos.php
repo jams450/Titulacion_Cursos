@@ -37,12 +37,13 @@
                               <h3 class="h3_xd"><a href="/view/cursos/detalle_curso.php?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
                             </div>
                             <div class="col-sm-2 listing-rate-share">
+                            <!--
                               <a class="opc">
                                 <i class="la la-gear"></i>
-                              </a>
+                              </a> -->
                             </div>
                           </div>
-                          <div class="lista_opc" style="display:none">
+                          <div class="lista_opc">
                             <ul >
                               <li> '.$icono_curso.' <a href="/view/cursos/curso.php?id='.$result['idcurso'].'" >Revisar Material  </a></li>
                               <!-- <li><a href="/view/cursos/detalle_curso.php?id='.$result['idcurso'].'" >Actividades <i class="la la-gear"></i> </a></li> -->
