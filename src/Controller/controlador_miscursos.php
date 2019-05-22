@@ -33,7 +33,7 @@
                           </ul>
                           <div class="row">
                             <div class="col-sm-8">
-                              <h3 class="h3_xd"><a href="/view/cursos/detalle_curso?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
+                              <h3 class="h3_xd"><a href="/view/cursos/detalle_curso.php?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
                             </div>
                             <div class="col-sm-2 listing-rate-share">
                               <a class="opc">
@@ -43,9 +43,9 @@
                           </div>
                           <div class="lista_opc" style="display:none">
                             <ul >
-                              <li> '.$icono_curso.' <a href="/view/cursos/curso?id='.$result['idcurso'].'" >Revisar Material  </a></li>
-                              <!-- <li><a href="/view/cursos/detalle_curso?id='.$result['idcurso'].'" >Actividades <i class="la la-gear"></i> </a></li> -->
-                              <li>'.$icono_examen.' <a href="/view/cursos/examenes_cursos?id='.$result['idcurso'].'" >Examen </a></li>
+                              <li> '.$icono_curso.' <a href="/view/cursos/curso.php?id='.$result['idcurso'].'" >Revisar Material  </a></li>
+                              <!-- <li><a href="/view/cursos/detalle_curso.php?id='.$result['idcurso'].'" >Actividades <i class="la la-gear"></i> </a></li> -->
+                              <li>'.$icono_examen.' <a href="/view/cursos/examenes_cursos.php?id='.$result['idcurso'].'" >Examen </a></li>
                             </ul>
                           </div>
                       </div>

@@ -24,7 +24,7 @@
                 <div class="listing-box-thumb">
                   <img src="/assets/images/cursos/'.$result['imagen_curso'].'" style="height:250px" alt="">
                   <div class="listing-box-title">
-                    <h3><a href="/view/cursos/detalle_curso?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
+                    <h3><a href="/view/cursos/detalle_curso.php?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
                     <span>'.$result['resumen'].'</span>
                   </div>
                 </div>
@@ -33,7 +33,7 @@
                     '.$vista_puntuacion.'
                     <span>'.$result['cantidad_usuarios'].'</span>
                   </div>
-                  <a href="/view/cursos/detalle_curso?id='.$result['idcurso'].'" ><i class="la la-eye"></i></a>
+                  <a href="/view/cursos/detalle_curso.php?id='.$result['idcurso'].'" ><i class="la la-eye"></i></a>
                 </div>
               </div>
             </div>
