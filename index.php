@@ -29,20 +29,19 @@
                 <li><img src="assets/images/main_slider/home-banner2.jpg" alt="" /></li>
                 <li><img src="assets/images/main_slider/home-banner3.jpg" alt="" /></li>
                 <li><img src="assets/images/main_slider/home-banner4.jpg" alt="" /></li>
-
                 <li><img src="assets/images/main_slider/home-banner6.jpg" alt="" /></li>
               </ul>
               <div class="mian-featured-area">
                 <div class="main-featured-text">
                   <h1 style="color:#00171f">Cursos de educacion financiera AEF</h1>
-                  <span style="color:#00171f; font-weight: bold;">Algunos de los mejores cursos</span>
+                  <span style="color:#00171f; font-weight: bold;">Los mejores cursos al alcance de una Aplicación Web</span>
                 </div>
 
                 <div class="cat-lists">
                   <ul>
-                    <li><a href="/view/cursos/detalle_curso.php?id=2" title="Tarjeta"><i class="la la-credit-card"></i><span style="color:#00171f;">Tarjeta de credito</span></a></li>
-                    <li><a href="/view/cursos/detalle_curso.php?id=3" title="Ahorro"><i class="la la la-bank"></i><span style="color:#00171f;">Cuenta de Ahorro</span></a></li>
-                    <li><a href="/view/cursos/detalle_curso.php?id=6" title="Seguros"><i class="la la la-shield"></i><span style="color:#00171f;">Seguros</span></a></li>
+                    <li><a href="/view/cursos/detalle_curso.php?id=1" title="Tarjeta"><i class="la la-credit-card"></i><span style="color:#00171f;">Tarjeta de Crédito</span></a></li>
+                    <li><a href="/view/cursos/detalle_curso.php?id=1" title="Ahorro"><i class="la la la-bank"></i><span style="color:#00171f;">Cuenta de Ahorro</span></a></li>
+                    <li><a href="/view/cursos/detalle_curso.php?id=1" title="Seguros"><i class="la la la-shield"></i><span style="color:#00171f;">Seguros</span></a></li>
                   </ul>
                 </div>
                 <a style="color:#00171f;" class="arrow-down floating" href="#scroll-here" title=""><i style="color:#00171f;" class="la la-angle-down"></i></a>
@@ -106,21 +105,21 @@
                     <div class="services">
                       <i class="la la-paperclip"></i>
                       <h3>Cursos</h3>
-                      <p></p>
+                      <p>Consulta, inscribe y atiende cualquiera de los cursos que esta plataforma ofrece sobre Servicios Financieros.</p>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="services">
-                      <i class="la la-map-marker"></i>
-                      <h3>Acreditacion</h3>
-                      <p></p>
+                      <i class="la la-user"></i>
+                      <h3>Registro</h3>
+                      <p>Accede a tu cuenta o ingresa un nuevo usuario para poder empezar a emplear AEF.</p>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="services">
-                      <i class="la la-tencent-weibo"></i>
+                      <i class="la la-money"></i>
                       <h3>Control de Gastos</h3>
-                      <p></p>
+                      <p>Maneja y administra de forma óptima los ingresos y/o gastos que vayan surgiendo, sea cual sea tu método de pago preferido (EN DESARROLLO).</p>
                     </div>
                   </div>
                 </div>
