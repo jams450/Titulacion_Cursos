@@ -47,7 +47,7 @@
       case 'inscribir':
         session_start();
         if (isset($_SESSION['id_sesion_usuario'])) {
-            $stmt=$conexion->prepare("insert into inscripcion_cursos values (?,?,NULL,NULL,NULL)");
+            $stmt=$conexion->prepare("insert into inscripcion_cursos values (?,?,0,0,NULL,0,0)");
             $stmt->bind_param("ii", $_POST['curso'], $_SESSION['id_sesion_usuario']);
             $stmt->execute();
             if ($stmt->affected_rows) {
