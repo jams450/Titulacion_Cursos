@@ -21,11 +21,11 @@
             }
 
             $vista_temas="";
-            $cursos_info=$conexion->query("select * FROM info_cursos where idcurso = " . $_GET['id']);
+            $cursos_info=$conexion->query("select * FROM contenido_curso where idcurso = " . $_GET['id']);
             while ($result=$cursos_info->fetch_assoc()) {
                 $vista_temas.='
                   <div class="col-md-4 col-sm-6">
-                    <span style="color:#d90429"><i class="la la-check-circle tema"></i>'.$result['encabezado'].'</span>
+                    <span style="color:#d90429"><i class="la la-check-circle tema"></i>'.$result['tema'].'</span>
                   </div>
                 ';
             }
