@@ -24,7 +24,7 @@
             $cursos_info=$conexion->query("select * FROM contenido_curso where idcurso = " . $_GET['id']);
             while ($result=$cursos_info->fetch_assoc()) {
                 $vista_temas.='
-                  <div class="col-md-4 col-sm-6">
+                  <div class="col-md-4 col-sm-6" style=" margin-bottom: 9px;">
                     <span style="color:#d90429"><i class="la la-check-circle tema"></i>'.$result['tema'].'</span>
                   </div>
                 ';
@@ -120,22 +120,22 @@
               <div class="link-bars">
                 <div class="container">
                   <a href="#description" title="">Descripcion</a>
-                  <a href="#meals" title="">Temas</a>
-                  <a href="#hours" title="">Reviews</a>
+                  <a href="#temas" title="">Temas</a>
+                  <a href="#review" title="">Reviews</a>
                 </div>
               </div>
               <div class="mian-listing-detail gray">
                 <div class="container">
                   <div class="row">
                     <div class="col-md-12 column">
-                      <div class="description-detail-box" >
-                        <h3 class="mini-title">DESCRIPCION</h3>
+                      <div class="description-detail-box" id="description">
+                        <h3 class="mini-title" >DESCRIPCION</h3>
                         <div class="detail-descriptions">
                           <p class="text-justify"><?=$informacion_curso['resumen']?></p>
                         </div>
                       </div>
 
-                      <div class="description-detail-box" >
+                      <div class="description-detail-box" id="temas">
                         <h3 class="mini-title">Temas</h3>
                         <div class="detail-descriptions">
                           <div class="amenities-sec" >
