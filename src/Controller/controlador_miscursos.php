@@ -43,9 +43,9 @@
                           </div>
                           <div class="lista_opc" style="display:none">
                             <ul >
-                              <li> '.$icono_curso.' <a href="/view/cursos/curso?id='.$result['idcurso'].'" >Revisar Material  </a></li>
+                              <li> '.$icono_curso.' <a href="/view/cursos/curso.php?id='.$result['idcurso'].'" >Revisar Material  </a></li>
                               <!-- <li><a href="/view/cursos/detalle_curso?id='.$result['idcurso'].'" >Actividades <i class="la la-gear"></i> </a></li> -->
-                              <li>'.$icono_examen.' <a href="/view/cursos/examenes_cursos?id='.$result['idcurso'].'" >Examen </a></li>
+                              <li>'.$icono_examen.' <a href="/view/cursos/examenes_cursos.php?id='.$result['idcurso'].'" >Examen </a></li>
                             </ul>
                           </div>
                       </div>

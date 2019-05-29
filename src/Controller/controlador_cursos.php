@@ -33,7 +33,7 @@
                     '.$vista_puntuacion.'
                     <span>'.$result['cantidad_usuarios'].'</span>
                   </div>
-                  <a href="/view/cursos/detalle_curso?id='.$result['idcurso'].'" ><i class="la la-eye"></i></a>
+                  <a href="/view/cursos/detalle_curso.php?id='.$result['idcurso'].'" ><i class="la la-eye"></i></a>
                 </div>
               </div>
             </div>

@@ -1,5 +1,5 @@
 <?php
-    include_once($_SERVER["DOCUMENT_ROOT"] . "/src/Model/conexion.php");
+    include_once($_SERVER["DOCUMENT_ROOT"] . "/src/model/conexion.php");
     $operacion = $_POST['operacion'];
     switch ($operacion) {
       case 'alta':
