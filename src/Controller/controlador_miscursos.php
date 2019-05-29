@@ -4,7 +4,8 @@
     switch ($operacion) {
       case 'get':
         //die(json_encode('$cursos_a'));
-        $cursos_todos=$conexion->query("select cursos.idcurso, cursos.nombrecurso, cursos.imagen_curso , promedio , curso FROM cursos right join inscripcion_cursos on inscripcion_cursos.idcurso = cursos.idcurso group by cursos.idcurso");
+        session_start();
+        $cursos_todos=$conexion->query("select cursos.idcurso, cursos.nombrecurso, cursos.imagen_curso , promedio , curso FROM cursos right join inscripcion_cursos on inscripcion_cursos.idcurso = cursos.idcurso where idusuario=".$_SESSION['id_sesion_usuario']." group by cursos.idcurso");
         while ($result=$cursos_todos->fetch_assoc()) {
             if ($result['promedio'] != 0) {
                 $icono_examen='<i style="color:green; font-size: 22px" class="la la-check"></i>';
@@ -33,18 +34,23 @@
                           </ul>
                           <div class="row">
                             <div class="col-sm-8">
-                              <h3 class="h3_xd"><a href="/view/cursos/detalle_curso?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
+                              <h3 class="h3_xd"><a href="/view/cursos/detalle_curso.php?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
                             </div>
                             <div class="col-sm-2 listing-rate-share">
+                            <!--
                               <a class="opc">
                                 <i class="la la-gear"></i>
-                              </a>
+                              </a> -->
                             </div>
                           </div>
-                          <div class="lista_opc" style="display:none">
+                          <div class="lista_opc">
                             <ul >
                               <li> '.$icono_curso.' <a href="/view/cursos/curso.php?id='.$result['idcurso'].'" >Revisar Material  </a></li>
+<<<<<<< HEAD
                               <!-- <li><a href="/view/cursos/detalle_curso?id='.$result['idcurso'].'" >Actividades <i class="la la-gear"></i> </a></li> -->
+=======
+                              <!-- <li><a href="/view/cursos/detalle_curso.php?id='.$result['idcurso'].'" >Actividades <i class="la la-gear"></i> </a></li> -->
+>>>>>>> 10d70f53dee92753d93ed66822aedef881da5553
                               <li>'.$icono_examen.' <a href="/view/cursos/examenes_cursos.php?id='.$result['idcurso'].'" >Examen </a></li>
                             </ul>
                           </div>

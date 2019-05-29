@@ -42,7 +42,7 @@ $('#registro_usuario').click(function(event) {
               title: 'Usuario registrado',
             });
             setTimeout(function(){
-                window.open('/index.php');
+                document.location.href ='/view/panel.php';
             }, 1500);
 
             break;

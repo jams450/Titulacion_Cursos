@@ -120,6 +120,10 @@ $(document).ready(function() {
         }
       })
     });
+
+    $("#regresar").click(function(e){
+      document.location.href ='/view/miscursos.php';
+    });
     // #end
 
 

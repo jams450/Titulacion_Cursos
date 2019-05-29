@@ -35,6 +35,10 @@
           }
       }
 
+      $terminado=$conexion->query("select * from inscripcion_cursos where idusuario=".$_SESSION['id_sesion_usuario']." and idcurso =". $_GET['id']);
+      if ($resul=$terminado->fetch_assoc()) {
+          $curso_ter=$resul['curso'];
+      }
       $conexion->close();
   }
 ?>
@@ -204,7 +208,14 @@
                       </div>
                       <?=$contenido4?>
                       <input type="button" data-page="4" name="previous" class="previous action-button style_btn" value="Anterior" />
-                      <input type="button" data-page="4" id="finalizar" class="action-button style_btn" value="Finalizar" />
+                      <?php
+                        if ($curso_ter==0) {
+                            echo '<input type="button" data-page="4" id="finalizar" class="action-button style_btn" value="Finalizar" />';
+                        } else {
+                            echo '<input type="button" id="regresar" class="action-button style_btn" value="Regresar" />';
+                        }
+                       ?>
+
                       <input type="hidden" name="id_curso" id="id_curso" value="<?=$id_curso?>">
                     </fieldset>
                     <!-- End Información Empresa -->

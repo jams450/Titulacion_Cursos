@@ -215,6 +215,7 @@
 								<span class="number">01</span>
 							</div>
 						</a></div><!-- How it Works -->
+
 						<div class="how-it-works"><a href="/view/cursos/buscador_cursos.php">
 							<div class="work-icon"> <img src="/view/images/icons/cursos.png" width="100" height="100" alt="" /> </div>
 							<div class="work-detail">
@@ -223,29 +224,31 @@
 								<span class="number">02</span>
 							</div>
 						</a></div><!-- How it Works -->
+
 						<div class="how-it-works"><a href="/view/miscursos.php">
 							<div class="work-icon"> <img src="/view/images/icons/miscursos.png" width="100" height="100" alt="" /> </div>
 							<div class="work-detail">
 								<h3>Mis Cursos</h3>
 								<p>Verifica todo lo relacionado a tus cursos inscritos: actividades, exámenes, evaluaciones,...</p>
 								<span class="number">03</span>
-							</a></div>
-						</div><!-- How it Works -->
+              </div>
+						</a></div><!-- How it Works -->
+
             <div class="how-it-works"><a href="/view/registro_usuario.php">
 							<div class="work-icon"> <img src="/view/images/icons/gastos.png" width="100" height="100" alt="" /> </div>
 							<div class="work-detail">
 								<h3>Mis Gastos</h3>
 								<p>Registra nuevos movimientos, ya sean ingresos o egresos, por cualquiera de tus métodos de pago.</p>
 								<span class="number">04</span>
-							</a></div>
-						</div><!-- How it Works -->
+              </div>
+						</a></div><!-- How it Works -->
             <div class="how-it-works"><a href="/view/usuarios/logout.php">
 							<div class="work-icon"> <img src="/view/images/icons/cerrarsesion.png" width="100" height="100" alt="" /> </div>
 							<div class="work-detail">
 								<h3>Cerrar Sesión</h3>
                 <span class="number">05</span>
-						</a></div>
-						</div><!-- How it Works -->
+              </div>
+            </a></div><!-- How it Works -->
 					</div>
 				</div>
 			</div>

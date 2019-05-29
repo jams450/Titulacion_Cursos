@@ -24,7 +24,7 @@
                 <div class="listing-box-thumb">
                   <img src="/assets/images/cursos/'.$result['imagen_curso'].'" alt="" height="200" width="150">
                   <div class="listing-box-title">
-                    <h3><a href="/view/cursos/detalle_curso?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
+                    <h3><a href="/view/cursos/detalle_curso.php?id='.$result['idcurso'].'" >'.$result['nombrecurso'].'</a></h3>
                     <span>'.$result['resumen'].'</span>
                   </div>
                 </div>
@@ -47,7 +47,7 @@
       case 'inscribir':
         session_start();
         if (isset($_SESSION['id_sesion_usuario'])) {
-            $stmt=$conexion->prepare("insert into inscripcion_cursos values (?,?,NULL,NULL,NULL)");
+            $stmt=$conexion->prepare("insert into inscripcion_cursos values (?,?,0,0,NULL,0,0)");
             $stmt->bind_param("ii", $_POST['curso'], $_SESSION['id_sesion_usuario']);
             $stmt->execute();
             if ($stmt->affected_rows) {
